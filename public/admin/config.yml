@@ -1,0 +1,23 @@
+site_url: https://switchframemedia.com
+logo_url: https://switchframemedia.com/wp-content/uploads/2018/04/switchframe-media-logo-1.png
+search: false
+publish_mode: simple
+media_folder: "public/assets" # Location where files will be stored in the repo
+public_folder: "assets" # The src attribute for uploaded media
+backend:
+  name: github
+  branch: main
+  repo: "sterlingwes/switchframe"
+  base_url: https://decap.swj.io
+collections:
+  - name: "portfolio" # Used in routes, e.g., /admin/collections/blog
+    label: "Portfolio" # Used in the UI
+    folder: "src/content/portfolio" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    fields: # The fields for each document, usually in frontmatter
+      - { label: "Layout", name: "layout", widget: "hidden", default: "blog" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Featured Image", name: "thumbnail", widget: "image" }
+      - { label: "Rating (scale of 1-5)", name: "rating", widget: "number" }
+      - { label: "Body", name: "body", widget: "markdown" }
