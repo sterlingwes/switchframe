@@ -4,9 +4,6 @@ search: false
 publish_mode: simple
 media_folder: "public/assets" # Location where files will be stored in the repo
 public_folder: "assets" # The src attribute for uploaded media
-media_library:
-  config:
-    max_file_size: 500000
 backend:
   name: github
   branch: main
