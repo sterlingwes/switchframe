@@ -11,15 +11,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - uses: oven-sh/setup-bun@v1
-        name: setup bun
-        with:
-          bun-version: 1.0.30
-
-      - name: install dependencies
-        run: bun install
-
-      - uses: sterlingwes/gh-pages-deploy-action@v1.1
+      - uses: sterlingwes/gh-pages-deploy-action@v1.2
         with:
           access-token: ${{ secrets.ACCESS_TOKEN }}
           source-directory: dist
