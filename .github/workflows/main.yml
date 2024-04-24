@@ -23,5 +23,5 @@ jobs:
         with:
           access-token: ${{ secrets.ACCESS_TOKEN }}
           source-directory: dist
-          build-command: bun build
+          build-command: bun run build
           auto-install: nope
