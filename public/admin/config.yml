@@ -13,11 +13,11 @@ collections:
   - name: "portfolio" # Used in routes, e.g., /admin/collections/blog
     label: "Portfolio" # Used in the UI
     folder: "src/content/portfolio" # The path to the folder where the documents are stored
-    create: true # Allow users to create new documents in this collection
-    fields: # The fields for each document, usually in frontmatter
-      - { label: "Layout", name: "layout", widget: "hidden", default: "blog" }
+    create: true
+    fields:
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Featured Image", name: "thumbnail", widget: "image" }
-      - { label: "Rating (scale of 1-5)", name: "rating", widget: "number" }
-      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Grid Image", name: "thumbnail", widget: "image" }
+      - { label: "Client", name: "client", widget: "string" }
+      - { label: "Categories", name: "categories", widget: "list" }
+      - { label: "Videos", name: "videos", widget: "list" }
+      - { label: "About This Project", name: "body", widget: "markdown" }
