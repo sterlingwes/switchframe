@@ -1,11 +1,11 @@
 ---
 logos:
-  - name: Curling Canada
-    logo: https://switchframemedia.com/wp-content/uploads/2018/04/sf-clients_0004_curlingcda.png
-    website: http://www.curling.ca/"
   - name: AXE Canada
     logo: https://switchframemedia.com/wp-content/uploads/2018/04/sf-clients_0015_axe.png
     website: https://www.axe.com/"
+  - name: Curling Canada
+    logo: https://switchframemedia.com/wp-content/uploads/2018/04/sf-clients_0004_curlingcda.png
+    website: http://www.curling.ca/"
   - name: Coleman Canada
     logo: https://switchframemedia.com/wp-content/uploads/2018/04/sf-clients_0014_coleman.png
     website: http://www.colemancanada.ca/"
