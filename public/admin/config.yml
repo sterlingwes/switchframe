@@ -4,6 +4,7 @@ search: false
 publish_mode: editorial_workflow
 media_folder: "public/assets" # Location where files will be stored in the repo
 public_folder: "assets" # The src attribute for uploaded media
+show_preview_links: false
 backend:
   name: github
   branch: main
@@ -18,6 +19,8 @@ collections:
       - label: Carousel
         name: carousel
         file: "src/content/clients/index.md"
+        editor:
+          preview: false
         fields:
           - label: Carousel Logos
             name: logos
@@ -26,10 +29,28 @@ collections:
               - { label: "Name", name: "name", widget: "string" }
               - { label: "Logo", name: "logo", widget: "image" }
               - { label: "Website", name: "website", widget: "string" }
-  - name: "portfolio" # Used in routes, e.g., /admin/collections/blog
-    label: "Portfolio" # Used in the UI
+      - label: Portfolio Ordering
+        name: portfolio_order
+        file: "src/content/clients/index-portfolio.md"
+        editor:
+          preview: false
+        fields:
+          - label: Portfolio Order
+            name: order
+            widget: list
+            fields:
+              - label: "Item"
+                name: "item"
+                widget: "relation"
+                collection: "portfolio"
+                value_field: "title"
+                search_fields: ["title"]
+  - name: "portfolio"
+    label: "Portfolio"
     folder: "src/content/portfolio"
     create: true
+    editor:
+      preview: false
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Grid Image", name: "thumbnail", widget: "image" }
