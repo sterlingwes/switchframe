@@ -1,14 +1,20 @@
 ---
 import { getCollection, getEntry } from "astro:content";
-import HomeLayout from "../layouts/HomeLayout.astro";
-import type { ClientLogo } from "../types";
+import HomeLayout from "../../layouts/HomeLayout.astro";
+import type { ClientLogo } from "../../types";
+import { normalizeCategory } from "../../lib/categories";
 
 const portfolio = await getCollection("portfolio");
 const portfolioItems = portfolio
-  .map((item) => ({
-    ...item.data,
-    slug: item.slug,
-  }))
+  .map((item) => {
+    const categories = item.data.categories.map(normalizeCategory);
+    return {
+      ...item.data,
+      categories,
+      filterCategories: [],
+      slug: item.slug,
+    };
+  })
   .slice(0, 6);
 
 const clients = await getCollection("clients");

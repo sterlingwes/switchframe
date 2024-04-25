@@ -1,0 +1,36 @@
+---
+import { getCollection } from "astro:content";
+import { categoryToFilterClass, normalizeCategory } from "../../lib/categories";
+import PortfolioGridLayout from "../../layouts/PortfolioGridLayout.astro";
+
+const portfolio = await getCollection("portfolio");
+const portfolioItems = portfolio.map((item) => {
+  const categories = item.data.categories.map(normalizeCategory);
+  const filterCategories = item.data.categories.map(categoryToFilterClass);
+  return {
+    ...item.data,
+    categories,
+    filterCategories,
+    slug: item.slug,
+  };
+});
+
+const categoryDupeCheck = new Set<string>();
+const categoryFilters: Array<{ label: string; filterClass: string }> = [];
+portfolioItems.forEach((item) => {
+  item.categories.forEach((category) => {
+    const filterClass = categoryToFilterClass(category);
+    if (categoryDupeCheck.has(filterClass)) return;
+    categoryDupeCheck.add(filterClass);
+    categoryFilters.push({ label: category, filterClass });
+  });
+});
+const sortedCategoryFilters = categoryFilters.sort((a, b) =>
+  a.label.localeCompare(b.label)
+);
+---
+
+<PortfolioGridLayout
+  portfolioItems={portfolioItems}
+  categoryFilters={sortedCategoryFilters}
+/>

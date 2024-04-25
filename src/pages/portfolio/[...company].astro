@@ -1,5 +1,6 @@
 ---
 import PortfolioPageLayout from "../../layouts/PortfolioPageLayout.astro";
+import { normalizeCategory } from "../../lib/categories";
 import type { RenderedPortfolioProps } from "../../types/portfolio.types";
 import { getCollection } from "astro:content";
 
@@ -10,7 +11,13 @@ export async function getStaticPaths() {
     const rendered = await entry.render();
     return acc.concat({
       params: { company: entry.slug },
-      props: { meta: entry.data, rendered },
+      props: {
+        meta: {
+          ...entry.data,
+          categories: entry.data.categories.map(normalizeCategory),
+        },
+        rendered,
+      },
     });
   }, Promise.resolve([]) as Promise<any[]>);
 }

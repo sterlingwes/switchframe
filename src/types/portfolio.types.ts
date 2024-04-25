@@ -6,6 +6,7 @@ export type RenderedPortfolioProps = {
     thumbnail: string;
     client: string;
     categories: string[];
+    filterCategories: string[];
     videos: string[];
   };
   rendered: {

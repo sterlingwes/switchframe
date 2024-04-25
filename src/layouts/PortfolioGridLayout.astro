@@ -3,13 +3,7 @@ import type { ClientLogo, RenderedPortfolioProps } from "../types";
 
 interface Props {
   portfolioItems: (RenderedPortfolioProps["meta"] & { slug: string })[];
-  clientLogos: ClientLogo[];
-  bannerVideo: {
-    id: string;
-    start: string;
-    end: string;
-    cover: string;
-  };
+  categoryFilters: Array<{ label: string; filterClass: string }>;
 }
 const props = Astro.props;
 ---
@@ -27,22 +21,24 @@ const props = Astro.props;
     <link rel="profile" href="http://gmpg.org/xfn/11" />
     <link rel="pingback" href="/xmlrpc.php" />
 
-    <title>Home | SwitchFrame Media</title>
-    <style type="text/css" id="stylesheet-inline-css-239">
-      .page-id-239.disabled_footer_top .footer_top_holder,
-      .page-id-239.disabled_footer_bottom .footer_bottom_holder {
+    <title>Portfolio | SwitchFrame Media</title>
+    <style type="text/css" id="stylesheet-inline-css-214">
+      .page-id-214.disabled_footer_top .footer_top_holder,
+      .page-id-214.disabled_footer_bottom .footer_bottom_holder {
         display: none;
       }
     </style>
-    <!-- This site is optimized with the Yoast SEO plugin v11.1 - https://yoast.com/wordpress/plugins/seo/ -->
-    <link rel="canonical" href="/" />
     <meta property="og:locale" content="en_US" />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Home | SwitchFrame Media" />
-    <meta property="og:url" content="/" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Portfolio | SwitchFrame Media" />
+    <meta property="og:url" content="/portfolio/" />
     <meta property="og:site_name" content="SwitchFrame Media" />
+    <meta
+      property="article:publisher"
+      content="https://www.facebook.com/SwitchFrameMedia/"
+    />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Home | SwitchFrame Media" />
+    <meta name="twitter:title" content="Portfolio | SwitchFrame Media" />
     <meta name="twitter:site" content="@SFrameMedia" />
     <meta name="twitter:creator" content="@SFrameMedia" />
 
@@ -497,16 +493,16 @@ const props = Astro.props;
       href="/wp-includes/wlwmanifest.xml"
     />
     <meta name="generator" content="WordPress 4.9.22" />
-    <link rel="shortlink" href="/" />
+    <link rel="shortlink" href="/?p=214" />
     <link
       rel="alternate"
       type="application/json+oembed"
-      href="/wp-json/oembed/1.0/embed?url=http%3A%2F%2F%2F"
+      href="/wp-json/oembed/1.0/embed?url=http%3A%2F%2F%2Fportfolio%2F"
     />
     <link
       rel="alternate"
       type="text/xml+oembed"
-      href="/wp-json/oembed/1.0/embed?url=http%3A%2F%2F%2F#038;format=xml"
+      href="/wp-json/oembed/1.0/embed?url=http%3A%2F%2F%2Fportfolio%2F#038;format=xml"
     />
     <style type="text/css">
       .recentcomments a {
@@ -601,12 +597,8 @@ const props = Astro.props;
       }
     </script>
     <style type="text/css" data-type="vc_shortcodes-custom-css">
-      .vc_custom_1523214687797 {
-        background-color: #f5f5f5 !important;
-      }
-      .vc_custom_1523472273767 {
-        padding-top: 50px !important;
-        padding-bottom: 50px !important;
+      .vc_custom_1467981284547 {
+        padding-bottom: 12px !important;
       }
     </style>
     <noscript
@@ -619,7 +611,7 @@ const props = Astro.props;
   </head>
 
   <body
-    class="home page-template page-template-full_width page-template-full_width-php page page-id-239 bridge-core-1.0.4 ajax_fade page_not_loaded qode-title-hidden qode_grid_1300 footer_responsive_adv qode-content-sidebar-responsive qode-theme-ver-18.0.9 qode-theme-bridge wpb-js-composer js-comp-ver-5.5.2 vc_responsive"
+    class="page-template page-template-full_width page-template-full_width-php page page-id-214 bridge-core-1.0.4 ajax_fade page_not_loaded qode-title-hidden qode_grid_1300 footer_responsive_adv qode-content-sidebar-responsive qode-theme-ver-18.0.9 qode-theme-bridge wpb-js-composer js-comp-ver-5.5.2 vc_responsive"
     itemscope
     itemtype="http://schema.org/WebPage"
   >
@@ -699,18 +691,18 @@ const props = Astro.props;
                   <ul id="menu-main-menu" class="">
                     <li
                       id="nav-menu-item-244"
-                      class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-239 current_page_item active narrow"
+                      class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home narrow"
                     >
-                      <a href="/" class="current"
+                      <a href="/" class=""
                         ><i class="menu_icon blank fa"></i><span>Home</span
                         ><span class="plus"></span></a
                       >
                     </li>
                     <li
                       id="nav-menu-item-254"
-                      class="menu-item menu-item-type-post_type menu-item-object-page narrow"
+                      class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-214 current_page_item active narrow"
                     >
-                      <a href="/new/portfolio/" class=""
+                      <a href="/portfolio/" class="current"
                         ><i class="menu_icon blank fa"></i><span>Work</span
                         ><span class="plus"></span></a
                       >
@@ -761,9 +753,9 @@ const props = Astro.props;
                   <ul id="menu-main-menu-1" class="">
                     <li
                       id="mobile-menu-item-244"
-                      class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-239 current_page_item active"
+                      class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home"
                     >
-                      <a href="/" class="current"><span>Home</span></a><span
+                      <a href="/" class=""><span>Home</span></a><span
                         class="mobile_arrow"
                         ><i class="fa fa-angle-right"></i><i
                           class="fa fa-angle-down"></i></span
@@ -771,9 +763,9 @@ const props = Astro.props;
                     </li>
                     <li
                       id="mobile-menu-item-254"
-                      class="menu-item menu-item-type-post_type menu-item-object-page"
+                      class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-214 current_page_item active"
                     >
-                      <a href="/new/portfolio/" class=""><span>Work</span></a
+                      <a href="/portfolio/" class="current"><span>Work</span></a
                       ><span class="mobile_arrow"
                         ><i class="fa fa-angle-right"></i><i
                           class="fa fa-angle-down"></i></span
@@ -831,22 +823,18 @@ const props = Astro.props;
 
         <div class="content content_top_margin">
           <div class="meta">
-            <div class="seo_title">Home | SwitchFrame Media</div>
+            <div class="seo_title">Portfolio | SwitchFrame Media</div>
 
-            <span id="qode_page_id">239</span>
+            <span id="qode_page_id">214</span>
             <div class="body_classes">
-              home,page-template,page-template-full_width,page-template-full_width-php,page,page-id-239,bridge-core-1.0.4,ajax_fade,page_not_loaded,,qode-title-hidden,qode_grid_1300,footer_responsive_adv,qode-content-sidebar-responsive,qode-theme-ver-18.0.9,qode-theme-bridge,wpb-js-composer
+              page-template,page-template-full_width,page-template-full_width-php,page,page-id-214,bridge-core-1.0.4,ajax_fade,page_not_loaded,,qode-title-hidden,qode_grid_1300,footer_responsive_adv,qode-content-sidebar-responsive,qode-theme-ver-18.0.9,qode-theme-bridge,wpb-js-composer
               js-comp-ver-5.5.2,vc_responsive
             </div>
           </div>
           <div class="content_inner">
-            <style type="text/css" data-type="vc_shortcodes-custom-css-239">
-              .vc_custom_1523214687797 {
-                background-color: #f5f5f5 !important;
-              }
-              .vc_custom_1523472273767 {
-                padding-top: 50px !important;
-                padding-bottom: 50px !important;
+            <style type="text/css" data-type="vc_shortcodes-custom-css-214">
+              .vc_custom_1467981284547 {
+                padding-bottom: 12px !important;
               }
             </style>
             <div class="full_width">
@@ -856,23 +844,21 @@ const props = Astro.props;
                   style="text-align: left"
                 >
                   <div class="full_section_inner clearfix">
-                    <div
-                      class="wpb_column vc_column_container vc_col-sm-12 vc_hidden-xs"
-                    >
+                    <div class="wpb_column vc_column_container vc_col-sm-12">
                       <div class="vc_column-inner">
                         <div class="wpb_wrapper">
                           <div
                             class="wpb_revslider_element wpb_content_element"
                           >
                             <link
-                              href="https://fonts.googleapis.com/css?family=Roboto:700%2C900%2C800%2C500"
+                              href="https://fonts.googleapis.com/css?family=Roboto:400%2C900%2C800%2C500"
                               rel="stylesheet"
                               property="stylesheet"
                               type="text/css"
                               media="all"
                             />
                             <div
-                              id="rev_slider_8_1_wrapper"
+                              id="rev_slider_6_1_wrapper"
                               class="rev_slider_wrapper fullwidthbanner-container"
                               data-source="gallery"
                               style="
@@ -885,7 +871,7 @@ const props = Astro.props;
                             >
                               <!-- START REVOLUTION SLIDER 5.4.8 fullwidth mode -->
                               <div
-                                id="rev_slider_8_1"
+                                id="rev_slider_6_1"
                                 class="rev_slider fullwidthabanner"
                                 style="display: none"
                                 data-version="5.4.8"
@@ -893,15 +879,16 @@ const props = Astro.props;
                                 <ul>
                                   <!-- SLIDE  -->
                                   <li
-                                    data-index="rs-11"
+                                    data-index="rs-7"
                                     data-transition="zoomout"
                                     data-slotamount="default"
                                     data-hideafterloop="0"
                                     data-hideslideonmobile="off"
-                                    data-easein="Power3.easeInOut"
-                                    data-easeout="Power3.easeInOut"
-                                    data-masterspeed="3000"
-                                    data-thumb={props.bannerVideo.cover}
+                                    data-easein="Power4.easeInOut"
+                                    data-easeout="Power4.easeInOut"
+                                    data-masterspeed="2000"
+                                    data-thumb="http://switchframemedia.com/wp-content/uploads/revslider/work/services-hero-100x50.jpg"
+                                    data-delay="6040"
                                     data-rotate="0"
                                     data-saveperformance="off"
                                     data-title="Intro"
@@ -919,87 +906,61 @@ const props = Astro.props;
                                   >
                                     <!-- MAIN IMAGE -->
                                     <img
-                                      src={props.bannerVideo.cover}
-                                      alt="SwitchFrame Media Banner Video Backdrop"
+                                      src="/wp-content/uploads/revslider/work/services-hero.jpg"
+                                      alt="SwitchFrame Media services-hero  "
                                       title=" "
-                                      width="1920"
-                                      height="1080"
                                       data-bgposition="center center"
                                       data-bgfit="cover"
+                                      data-bgrepeat="no-repeat"
                                       data-bgparallax="10"
                                       class="rev-slidebg"
                                       data-no-retina
                                     />
                                     <!-- LAYERS -->
 
-                                    <!-- BACKGROUND VIDEO LAYER -->
-                                    <div
-                                      class="rs-background-video-layer"
-                                      data-volume="mute"
-                                      data-ytid={props.bannerVideo.id}
-                                      data-videoattributes="version=3&enablejsapi=1&html5=1&hd=1&wmode=opaque&showinfo=0&rel=0;;origin=http://switchframemedia.com;"
-                                      data-videorate="1"
-                                      data-videowidth="100%"
-                                      data-videoheight="100%"
-                                      data-videocontrols="none"
-                                      data-videostartat={props.bannerVideo
-                                        .start}
-                                      data-videoendat={props.bannerVideo.end}
-                                      data-videoloop="loopandnoslidestop"
-                                      data-forcecover="1"
-                                      data-aspectratio="16:9"
-                                      data-autoplay="true"
-                                      data-autoplayonlyfirsttime="false"
-                                    >
-                                    </div>
                                     <!-- LAYER NR. 1 -->
                                     <div
-                                      class="tp-caption NotGeneric-Title tp-resizeme"
-                                      id="slide-11-layer-1"
+                                      class="tp-caption tp-shape tp-shapewrapper"
+                                      id="slide-7-layer-10"
                                       data-x="['center','center','center','center']"
-                                      data-hoffset="['-1','0','1','0']"
+                                      data-hoffset="['0','0','0','0']"
                                       data-y="['middle','middle','middle','middle']"
-                                      data-voffset="['0','0','47','36']"
-                                      data-fontsize="['70','70','60','40']"
-                                      data-lineheight="['70','70','70','50']"
-                                      data-fontweight="['700','800','900','900']"
-                                      data-width="none"
-                                      data-height="none"
+                                      data-voffset="['0','0','0','0']"
+                                      data-width="full"
+                                      data-height="full"
                                       data-whitespace="nowrap"
-                                      data-visibility="['on','on','off','off']"
-                                      data-type="text"
+                                      data-type="shape"
+                                      data-basealign="slide"
                                       data-responsive_offset="on"
-                                      data-frames='[{"delay":1000,"speed":1500,"frame":"0","from":"z:0;rX:0deg;rY:0;rZ:0;sX:1.5;sY:1.5;skX:0;skY:0;opacity:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"frame":"999","to":"y:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"}]'
+                                      data-responsive="off"
+                                      data-frames='[{"from":"opacity:0;","speed":1500,"to":"o:1;","delay":90,"ease":"Power3.easeInOut"},{"delay":"wait","speed":3260,"ease":"nothing"}]'
                                       data-textalign="['left','left','left','left']"
-                                      data-paddingtop="[10,10,10,10]"
+                                      data-paddingtop="[0,0,0,0]"
                                       data-paddingright="[0,0,0,0]"
-                                      data-paddingbottom="[10,10,10,10]"
+                                      data-paddingbottom="[0,0,0,0]"
                                       data-paddingleft="[0,0,0,0]"
                                       style="
                                         z-index: 5;
-                                        white-space: nowrap;
-                                        font-weight: 700;
-                                        letter-spacing: ;
-                                        font-family: Roboto;
+                                        text-transform: left;
+                                        background-color: rgba(0, 0, 0, 0.7);
                                       "
                                     >
-                                      SHOOT. EDIT. DELIVER.
                                     </div>
 
                                     <!-- LAYER NR. 2 -->
                                     <div
-                                      class="tp-caption NotGeneric-SubTitle tp-resizeme"
-                                      id="slide-11-layer-4"
+                                      class="tp-caption NotGeneric-Icon tp-resizeme"
+                                      id="slide-7-layer-8"
                                       data-x="['center','center','center','center']"
                                       data-hoffset="['0','0','0','0']"
                                       data-y="['middle','middle','middle','middle']"
-                                      data-voffset="['52','52','95','74']"
+                                      data-voffset="['-66','-68','9','16']"
                                       data-width="none"
                                       data-height="none"
                                       data-whitespace="nowrap"
                                       data-type="text"
                                       data-responsive_offset="on"
-                                      data-frames='[{"delay":1000,"speed":1500,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","to":"o:1;","ease":"Power4.easeInOut"},{"delay":"wait","speed":1000,"frame":"999","to":"y:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"}]'
+                                      data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];","speed":1500,"to":"o:1;","delay":1000,"ease":"Power4.easeInOut"},{"delay":"wait","speed":1000,"to":"y:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"}]'
                                       data-textalign="['left','left','left','left']"
                                       data-paddingtop="[0,0,0,0]"
                                       data-paddingright="[0,0,0,0]"
@@ -1008,11 +969,76 @@ const props = Astro.props;
                                       style="
                                         z-index: 6;
                                         white-space: nowrap;
-                                        letter-spacing: ;
                                         font-family: Roboto;
+                                        text-transform: left;
+                                        cursor: default;
                                       "
                                     >
-                                      CONNECT WITH YOUR AUDIENCE
+                                      <i class="fa-icon-video-camera"></i>
+                                    </div>
+
+                                    <!-- LAYER NR. 3 -->
+                                    <div
+                                      class="tp-caption NotGeneric-Title tp-resizeme"
+                                      id="slide-7-layer-1"
+                                      data-x="['center','center','center','center']"
+                                      data-hoffset="['0','0','0','0']"
+                                      data-y="['middle','middle','middle','middle']"
+                                      data-voffset="['0','0','63','62']"
+                                      data-fontsize="['70','70','70','50']"
+                                      data-lineheight="['70','70','70','50']"
+                                      data-fontweight="['900','800','900','900']"
+                                      data-width="none"
+                                      data-height="none"
+                                      data-whitespace="nowrap"
+                                      data-type="text"
+                                      data-responsive_offset="on"
+                                      data-frames='[{"from":"z:0;rX:0deg;rY:0;rZ:0;sX:1.5;sY:1.5;skX:0;skY:0;opacity:0;","mask":"x:0px;y:0px;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"y:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"}]'
+                                      data-textalign="['left','left','left','left']"
+                                      data-paddingtop="[10,10,10,10]"
+                                      data-paddingright="[0,0,0,0]"
+                                      data-paddingbottom="[10,10,10,10]"
+                                      data-paddingleft="[0,0,0,0]"
+                                      style="
+                                        z-index: 7;
+                                        white-space: nowrap;
+                                        font-weight: 900;
+                                        font-family: Roboto;
+                                        text-transform: left;
+                                      "
+                                    >
+                                      OUR WORK
+                                    </div>
+
+                                    <!-- LAYER NR. 4 -->
+                                    <div
+                                      class="tp-caption NotGeneric-SubTitle tp-resizeme"
+                                      id="slide-7-layer-4"
+                                      data-x="['center','center','center','center']"
+                                      data-hoffset="['0','0','0','0']"
+                                      data-y="['middle','middle','middle','middle']"
+                                      data-voffset="['52','52','108','97']"
+                                      data-fontsize="['14','13','13','10']"
+                                      data-width="none"
+                                      data-height="none"
+                                      data-whitespace="nowrap"
+                                      data-type="text"
+                                      data-responsive_offset="on"
+                                      data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];","speed":1500,"to":"o:1;","delay":1000,"ease":"Power4.easeInOut"},{"delay":"wait","speed":1000,"to":"y:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"}]'
+                                      data-textalign="['left','left','left','left']"
+                                      data-paddingtop="[0,0,0,0]"
+                                      data-paddingright="[0,0,0,0]"
+                                      data-paddingbottom="[0,0,0,0]"
+                                      data-paddingleft="[0,0,0,0]"
+                                      style="
+                                        z-index: 8;
+                                        white-space: nowrap;
+                                        font-size: 14px;
+                                        font-family: Roboto;
+                                        text-transform: left;
+                                      "
+                                    >
+                                      A FEW THINGS WE'VE DONE
                                     </div>
                                   </li>
                                 </ul>
@@ -1027,7 +1053,7 @@ const props = Astro.props;
                                   "rs-plugin-settings-inline-css"
                                 );
                                 var htmlDivCss =
-                                  ".tp-caption.NotGeneric-Title,.NotGeneric-Title{color:rgba(255,255,255,1.00);font-size:70px;line-height:70px;font-weight:800;font-style:normal;font-family:Raleway;text-decoration:none;background-color:transparent;border-color:transparent;border-style:none;border-width:0px;border-radius:0 0 0 0px}.tp-caption.NotGeneric-SubTitle,.NotGeneric-SubTitle{color:rgba(255,255,255,1.00);font-size:13px;line-height:20px;font-weight:500;font-style:normal;font-family:Raleway;text-decoration:none;background-color:transparent;border-color:transparent;border-style:none;border-width:0px;border-radius:0 0 0 0px;letter-spacing:4px}";
+                                  ".tp-caption.NotGeneric-Title,.NotGeneric-Title{color:rgba(255,255,255,1.00);font-size:70px;line-height:70px;font-weight:800;font-style:normal;font-family:Raleway;text-decoration:none;background-color:transparent;border-color:transparent;border-style:none;border-width:0px;border-radius:0 0 0 0px}.tp-caption.NotGeneric-SubTitle,.NotGeneric-SubTitle{color:rgba(255,255,255,1.00);font-size:13px;line-height:20px;font-weight:500;font-style:normal;font-family:Raleway;text-decoration:none;background-color:transparent;border-color:transparent;border-style:none;border-width:0px;border-radius:0 0 0 0px;letter-spacing:4px}.tp-caption.NotGeneric-Icon,.NotGeneric-Icon{color:rgba(255,255,255,1.00);font-size:30px;line-height:30px;font-weight:400;font-style:normal;font-family:Raleway;text-decoration:none;background-color:rgba(0,0,0,0);border-color:rgba(255,255,255,0);border-style:solid;border-width:0px;border-radius:0px 0px 0px 0px;letter-spacing:3px}";
                                 if (htmlDiv) {
                                   htmlDiv.innerHTML =
                                     htmlDiv.innerHTML + htmlDivCss;
@@ -1043,14 +1069,14 @@ const props = Astro.props;
                               <script type="text/javascript">
                                 if (setREVStartSize !== undefined)
                                   setREVStartSize({
-                                    c: "#rev_slider_8_1",
+                                    c: "#rev_slider_6_1",
                                     responsiveLevels: [1240, 1024, 778, 480],
                                     gridwidth: [1240, 1024, 778, 480],
-                                    gridheight: [550, 550, 550, 500],
+                                    gridheight: [450, 450, 400, 300],
                                     sliderLayout: "fullwidth",
                                   });
 
-                                var revapi8, tpj;
+                                var revapi6, tpj;
                                 (function () {
                                   if (
                                     !/loaded|interactive|complete/.test(
@@ -1068,25 +1094,22 @@ const props = Astro.props;
                                       if ("off" == "on") tpj.noConflict();
                                     }
                                     if (
-                                      tpj("#rev_slider_8_1").revolution ==
+                                      tpj("#rev_slider_6_1").revolution ==
                                       undefined
                                     ) {
                                       revslider_showDoubleJqueryError(
-                                        "#rev_slider_8_1"
+                                        "#rev_slider_6_1"
                                       );
                                     } else {
-                                      revapi8 = tpj("#rev_slider_8_1")
+                                      revapi6 = tpj("#rev_slider_6_1")
                                         .show()
                                         .revolution({
-                                          sliderType: "standard",
+                                          sliderType: "hero",
                                           jsFileLocation:
                                             "/wp-content/plugins/revslider/public/assets/js/",
                                           sliderLayout: "fullwidth",
                                           dottedOverlay: "none",
                                           delay: 9000,
-                                          navigation: {
-                                            onHoverStop: "off",
-                                          },
                                           responsiveLevels: [
                                             1240, 1024, 778, 480,
                                           ],
@@ -1094,10 +1117,10 @@ const props = Astro.props;
                                             1240, 1024, 778, 480,
                                           ],
                                           gridwidth: [1240, 1024, 778, 480],
-                                          gridheight: [550, 550, 550, 500],
+                                          gridheight: [450, 450, 400, 300],
                                           lazyType: "none",
                                           parallax: {
-                                            type: "scroll",
+                                            type: "mouse",
                                             origo: "slidercenter",
                                             speed: 2000,
                                             speedbg: 0,
@@ -1109,10 +1132,6 @@ const props = Astro.props;
                                           },
                                           shadow: 0,
                                           spinner: "off",
-                                          stopLoop: "on",
-                                          stopAfterLoops: 0,
-                                          stopAtSlide: 1,
-                                          shuffle: "off",
                                           autoHeight: "off",
                                           disableProgressBar: "on",
                                           hideThumbsOnMobile: "off",
@@ -1122,7 +1141,6 @@ const props = Astro.props;
                                           debugMode: false,
                                           fallbacks: {
                                             simplifyAll: "off",
-                                            nextSlideOnWindowFocus: "off",
                                             disableFocusListener: false,
                                           },
                                         });
@@ -1133,126 +1151,10 @@ const props = Astro.props;
                             </div>
                             <!-- END REVOLUTION SLIDER -->
                           </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="vc_row wpb_row section vc_row-fluid"
-                  style="text-align: left"
-                >
-                  <div class="full_section_inner clearfix">
-                    <div
-                      class="wpb_column vc_column_container vc_col-sm-12 vc_hidden-lg vc_hidden-md vc_hidden-sm"
-                    >
-                      <div class="vc_column-inner">
-                        <div class="wpb_wrapper">
-                          <div
-                            class="wpb_single_image wpb_content_element vc_align_left"
-                          >
-                            <div class="wpb_wrapper">
-                              <div
-                                class="vc_single_image-wrapper vc_box_border_grey"
-                              >
-                                <img
-                                  title=" "
-                                  width="1920"
-                                  height="800"
-                                  src="/wp-content/uploads/2018/06/homepage-hero-mobile-1.jpg"
-                                  class="vc_single_image-img attachment-full"
-                                  alt="SwitchFrame Media homepage-hero-mobile-1  "
-                                  srcset="
-                                    /wp-content/uploads/2018/06/homepage-hero-mobile-1.jpg          1920w,
-                                    /wp-content/uploads/2018/06/homepage-hero-mobile-1-300x125.jpg   300w,
-                                    /wp-content/uploads/2018/06/homepage-hero-mobile-1-768x320.jpg   768w,
-                                    /wp-content/uploads/2018/06/homepage-hero-mobile-1-1024x427.jpg 1024w,
-                                    /wp-content/uploads/2018/06/homepage-hero-mobile-1-700x292.jpg   700w
-                                  "
-                                  sizes="(max-width: 1920px) 100vw, 1920px"
-                                />
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="vc_row wpb_row section vc_row-fluid vc_custom_1523214687797 grid_section"
-                  style="background-color: #e2e2e2; text-align: center"
-                >
-                  <div class="section_inner clearfix">
-                    <div class="section_inner_margin clearfix">
-                      <div class="wpb_column vc_column_container vc_col-sm-12">
-                        <div class="vc_column-inner">
-                          <div class="wpb_wrapper">
-                            <div class="vc_empty_space" style="height: 50px">
-                              <span class="vc_empty_space_inner">
-                                <span class="empty_space_image"></span>
-                              </span>
-                            </div>
-
-                            <div class="wpb_text_column wpb_content_element">
-                              <div class="wpb_wrapper">
-                                <h2>Who We&#8217;ve Worked With</h2>
-                              </div>
-                            </div>
-                            <div
-                              class="separator small center"
-                              style="background-color: #cc3333"
-                            >
-                            </div>
-                            <div class="qode_carousels_holder clearfix">
-                              <div
-                                class="qode_carousels"
-                                data-number-of-visible-items=""
-                              >
-                                <ul class="slides">
-                                  {
-                                    props.clientLogos.map((logo) => (
-                                      <li class="item">
-                                        <div class="carousel_item_holder">
-                                          <a
-                                            itemprop="url"
-                                            href={logo.website}
-                                            target="_blank"
-                                          >
-                                            <>
-                                              <span
-                                                class="first_image_holder has_hover_image"
-                                                style="filter: grayscale(100%);"
-                                              >
-                                                <img
-                                                  title={logo.name}
-                                                  itemprop="image"
-                                                  src={logo.logo}
-                                                  alt={logo.name}
-                                                />
-                                              </span>
-                                              <span class="second_image_holder has_hover_image">
-                                                <img
-                                                  title={logo.name}
-                                                  itemprop="image"
-                                                  src={logo.logo}
-                                                  alt={logo.name}
-                                                />
-                                              </span>
-                                            </>
-                                          </a>
-                                        </div>
-                                      </li>
-                                    ))
-                                  }
-                                </ul>
-                              </div>
-                            </div>
-                            <div class="vc_empty_space" style="height: 50px">
-                              <span class="vc_empty_space_inner">
-                                <span class="empty_space_image"></span>
-                              </span>
-                            </div>
+                          <div class="vc_empty_space" style="height: 32px">
+                            <span class="vc_empty_space_inner">
+                              <span class="empty_space_image"></span>
+                            </span>
                           </div>
                         </div>
                       </div>
@@ -1267,56 +1169,93 @@ const props = Astro.props;
                     <div class="wpb_column vc_column_container vc_col-sm-12">
                       <div class="vc_column-inner">
                         <div class="wpb_wrapper">
-                          <div class="vc_empty_space" style="height: 50px">
+                          <div class="vc_empty_space" style="height: 32px">
                             <span class="vc_empty_space_inner">
                               <span class="empty_space_image"></span>
                             </span>
                           </div>
-
-                          <div class="wpb_text_column wpb_content_element">
-                            <div class="wpb_wrapper">
-                              <h2 style="text-align: center">Our Work</h2>
-                            </div>
-                          </div>
-                          <div
-                            class="separator small center"
-                            style="background-color: #cc3333"
-                          >
-                          </div>
-                          <div class="vc_empty_space" style="height: 25px">
-                            <span class="vc_empty_space_inner">
-                              <span class="empty_space_image"></span>
-                            </span>
-                          </div>
-
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="vc_row wpb_row section vc_row-fluid vc_custom_1467981284547"
+                  style="text-align: left"
+                >
+                  <div class="full_section_inner clearfix">
+                    <div class="wpb_column vc_column_container vc_col-sm-12">
+                      <div class="vc_column-inner">
+                        <div class="wpb_wrapper">
                           <div
                             class="q_elements_holder one_column responsive_mode_from_768"
                           >
                             <div
                               class="q_elements_item data-animation="
-                              data-item-class="q_elements_holder_custom_480185"
+                              data-item-class="q_elements_holder_custom_918808"
                             >
                               <div class="q_elements_item_inner">
                                 <div
-                                  class="q_elements_item_content q_elements_holder_custom_480185"
+                                  class="q_elements_item_content q_elements_holder_custom_918808"
                                   style="padding: 0 12px"
                                 >
-                                  <style type="text/css">
-                                    .projects_holder {
-                                      display: flex;
-                                      flex-wrap: wrap;
-                                      justify-content: space-between;
-                                    }
-                                  </style>
                                   <div
                                     class="projects_holder_outer v3 portfolio_with_space portfolio_with_hover_text"
                                   >
+                                    <div class="filter_outer">
+                                      <div class="filter_holder">
+                                        <style type="text/css">
+                                          li.filter {
+                                            padding-bottom: 10px;
+                                          }
+                                          li.filter.active {
+                                            border-bottom: 2px solid #ddd;
+                                            border-radius: 8px;
+                                          }
+                                        </style>
+                                        <ul>
+                                          <li class="filter" data-filter="all">
+                                            <span style="color: #cc3333"
+                                              >All</span
+                                            >
+                                          </li>
+                                          {
+                                            props.categoryFilters.map(
+                                              (category) => (
+                                                <li
+                                                  class="filter"
+                                                  data-filter={
+                                                    category.filterClass
+                                                  }
+                                                >
+                                                  <span style="color: #cc3333">
+                                                    {category.label}
+                                                  </span>
+                                                </li>
+                                              )
+                                            )
+                                          }
+                                        </ul>
+                                      </div>
+                                    </div>
+                                    <style type="text/css">
+                                      .projects_holder {
+                                        display: flex;
+                                        flex-wrap: wrap;
+                                        justify-content: space-between;
+                                      }
+                                    </style>
                                     <div
                                       class="projects_holder portfolio_main_holder clearfix v3 hover_text portfolio_full_image"
                                     >
                                       {
                                         props.portfolioItems.map((item) => (
-                                          <article class="mix" style="">
+                                          <article
+                                            class={`mix ${item.filterCategories.join(
+                                              " "
+                                            )}`}
+                                            style=""
+                                          >
                                             <div class="image_holder">
                                               <>
                                                 <a
@@ -1371,7 +1310,18 @@ const props = Astro.props;
                                                           </span>
                                                         </div>
                                                       </div>
-                                                      <span class="feature_holder" />
+                                                      <span class="feature_holder">
+                                                        <span class="feature_holder_icons">
+                                                          <a
+                                                            itemprop="url"
+                                                            class="preview qbutton small white"
+                                                            href={`/portfolio/${item.slug}`}
+                                                            target="_self"
+                                                          >
+                                                            view
+                                                          </a>
+                                                        </span>
+                                                      </span>
                                                     </span>
                                                   </span>
                                                 </span>
@@ -1380,341 +1330,13 @@ const props = Astro.props;
                                           </article>
                                         ))
                                       }
-                                      <div class="filler"></div><div
-                                        class="filler"
-                                      >
-                                      </div><div class="filler"></div>
+                                      <div class="filler"></div>
+                                      <div class="filler"></div>
+                                      <div class="filler"></div>
                                     </div>
                                   </div>
                                 </div>
                               </div>
-                            </div>
-                          </div>
-                          <div class="vc_empty_space" style="height: 25px">
-                            <span class="vc_empty_space_inner">
-                              <span class="empty_space_image"></span>
-                            </span>
-                          </div>
-
-                          <div
-                            class="vc_row wpb_row section vc_row-fluid vc_inner"
-                            style="text-align: center"
-                          >
-                            <div class="full_section_inner clearfix">
-                              <div
-                                class="wpb_column vc_column_container vc_col-sm-4"
-                              >
-                                <div class="vc_column-inner">
-                                  <div class="wpb_wrapper"></div>
-                                </div>
-                              </div>
-                              <div
-                                class="wpb_column vc_column_container vc_col-sm-4"
-                              >
-                                <div class="vc_column-inner">
-                                  <div class="wpb_wrapper"></div>
-                                </div>
-                              </div>
-                              <div
-                                class="wpb_column vc_column_container vc_col-sm-4"
-                              >
-                                <div class="vc_column-inner">
-                                  <div class="wpb_wrapper">
-                                    <a
-                                      itemprop="url"
-                                      href="/new/portfolio/"
-                                      target="_self"
-                                      class="qbutton large default"
-                                      style="
-                                        color: #ffffff;
-                                        background-color: #000000;
-                                      "
-                                      >View All Work<i
-                                        class="qode_icon_font_awesome fa fa-angle-right qode_button_icon_element"
-                                        style=""></i></a
-                                    >
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="vc_empty_space" style="height: 50px">
-                            <span class="vc_empty_space_inner">
-                              <span class="empty_space_image"></span>
-                            </span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="vc_row wpb_row section vc_row-fluid grid_section"
-                  style="background-color: #cc3333; text-align: center"
-                >
-                  <div class="section_inner clearfix">
-                    <div class="section_inner_margin clearfix">
-                      <div class="wpb_column vc_column_container vc_col-sm-12">
-                        <div class="vc_column-inner">
-                          <div class="wpb_wrapper">
-                            <div class="vc_empty_space" style="height: 50px">
-                              <span class="vc_empty_space_inner">
-                                <span class="empty_space_image"></span>
-                              </span>
-                            </div>
-
-                            <div class="wpb_text_column wpb_content_element">
-                              <div class="wpb_wrapper">
-                                <h2 style="color: #ffffff">
-                                  What People Say About Our Work
-                                </h2>
-                              </div>
-                            </div>
-                            <div
-                              class="separator small center"
-                              style="background-color: #ffffff"
-                            >
-                            </div>
-                            <div class="vc_empty_space" style="height: 25px">
-                              <span class="vc_empty_space_inner">
-                                <span class="empty_space_image"></span>
-                              </span>
-                            </div>
-
-                            <div
-                              class="vc_row wpb_row section vc_row-fluid vc_inner grid_section"
-                              style="text-align: center"
-                            >
-                              <div class="section_inner clearfix">
-                                <div class="section_inner_margin clearfix">
-                                  <div
-                                    class="wpb_column vc_column_container vc_col-sm-4"
-                                  >
-                                    <div class="vc_column-inner">
-                                      <div class="wpb_wrapper"></div>
-                                    </div>
-                                  </div>
-                                  <div
-                                    class="wpb_column vc_column_container vc_col-sm-4"
-                                  >
-                                    <div class="vc_column-inner">
-                                      <div class="wpb_wrapper">
-                                        <span
-                                          data-type="normal"
-                                          class="qode_icon_shortcode q_font_awsome_icon fa-2x"
-                                          style=""
-                                          ><i
-                                            class="qode_icon_font_awesome fa fa-quote-left qode_icon_element"
-                                            style="color: #ffffff"></i></span
-                                        >
-                                      </div>
-                                    </div>
-                                  </div>
-                                  <div
-                                    class="wpb_column vc_column_container vc_col-sm-4"
-                                  >
-                                    <div class="vc_column-inner">
-                                      <div class="wpb_wrapper"></div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div
-                              class="vc_row wpb_row section vc_row-fluid vc_inner"
-                              style="
-                                background-color: #cc3333;
-                                text-align: center;
-                              "
-                            >
-                              <div class="full_section_inner clearfix">
-                                <div
-                                  class="wpb_column vc_column_container vc_col-sm-12"
-                                >
-                                  <div class="vc_column-inner">
-                                    <div class="wpb_wrapper">
-                                      <div
-                                        class="testimonials_c_holder clearfix light"
-                                      >
-                                        <div
-                                          class="testimonials_c testimonials_c_carousel"
-                                          data-show-navigation="yes"
-                                          data-animation-speed=""
-                                          data-auto-rotate-slides="10"
-                                          data-number-per-slide="1"
-                                        >
-                                          <ul class="slides">
-                                            <li
-                                              id="testimonials-c-3158"
-                                              class="testimonial_content"
-                                            >
-                                              <div
-                                                class="testimonial_content_inner"
-                                              >
-                                                <div
-                                                  class="testimonial_text_holder"
-                                                >
-                                                  <div
-                                                    class="testimonial_text_inner"
-                                                    style="color: #ffffff"
-                                                  >
-                                                    <p
-                                                      style="
-                                                        font-size: 18pxpx;
-                                                        color: #ffffff;
-                                                      "
-                                                    >
-                                                      You and your crew were
-                                                      pros through and through.
-                                                      If there was a Yelp rating
-                                                      for film crews, I'd give
-                                                      it 4.5 stars. The missing
-                                                      half star is only because
-                                                      I didn't get to fly the
-                                                      drone.
-                                                    </p>
-                                                    <p
-                                                      class="testimonial_author"
-                                                      style="
-                                                        color: #ffffff;
-                                                        font-weight: 500;
-                                                        color: #ffffff;
-                                                        font-size: 18px;
-                                                      "
-                                                    >
-                                                      Derek Ng, Sodexo Canada
-                                                    </p>
-                                                  </div>
-                                                </div>
-                                              </div>
-                                            </li>
-                                            <li
-                                              id="testimonials-c-2933"
-                                              class="testimonial_content"
-                                            >
-                                              <div
-                                                class="testimonial_content_inner"
-                                              >
-                                                <div
-                                                  class="testimonial_text_holder"
-                                                >
-                                                  <div
-                                                    class="testimonial_text_inner"
-                                                    style="color: #ffffff"
-                                                  >
-                                                    <p
-                                                      style="
-                                                        font-size: 18pxpx;
-                                                        color: #ffffff;
-                                                      "
-                                                    >
-                                                      SwitchFrame are a team of
-                                                      highly skilled, efficient
-                                                      and friendly content
-                                                      producers who are always a
-                                                      pleasure to work with.
-                                                      I’ve partnered with them
-                                                      on the simplest half-day
-                                                      shoots, to full-scale
-                                                      multi-day studio
-                                                      productions and they
-                                                      always bring the same
-                                                      level of professionalism,
-                                                      attention to detail and
-                                                      work ethic no matter the
-                                                      project, and with
-                                                      outstanding results.
-                                                    </p>
-                                                    <p
-                                                      class="testimonial_author"
-                                                      style="
-                                                        color: #ffffff;
-                                                        font-weight: 500;
-                                                        color: #ffffff;
-                                                        font-size: 18px;
-                                                      "
-                                                    >
-                                                      Evan Davis, Digital Video
-                                                      Content Producer, Edelman
-                                                    </p>
-                                                  </div>
-                                                </div>
-                                              </div>
-                                            </li>
-                                            <li
-                                              id="testimonials-c-2932"
-                                              class="testimonial_content"
-                                            >
-                                              <div
-                                                class="testimonial_content_inner"
-                                              >
-                                                <div
-                                                  class="testimonial_text_holder"
-                                                >
-                                                  <div
-                                                    class="testimonial_text_inner"
-                                                    style="color: #ffffff"
-                                                  >
-                                                    <p
-                                                      style="
-                                                        font-size: 18pxpx;
-                                                        color: #ffffff;
-                                                      "
-                                                    >
-                                                      The guys at SwitchFrame
-                                                      Media are amazing to work
-                                                      with. Kyle and Josh have
-                                                      completed a number of
-                                                      videos for various clients
-                                                      of mine, and their work is
-                                                      unlike any other. They
-                                                      make sure to support every
-                                                      project they do, every
-                                                      step of the way – from the
-                                                      initial creative process
-                                                      to cinematic storytelling,
-                                                      to final production. I
-                                                      have (and will continue
-                                                      to) recommend SwitchFrame
-                                                      Media internally at our
-                                                      agency to other teams
-                                                      looking for full-service
-                                                      video production, and
-                                                      would highly recommend
-                                                      them to anyone looking to
-                                                      create video content for
-                                                      themselves, their
-                                                      business, or their
-                                                      clients.
-                                                    </p>
-                                                    <p
-                                                      class="testimonial_author"
-                                                      style="
-                                                        color: #ffffff;
-                                                        font-weight: 500;
-                                                        color: #ffffff;
-                                                        font-size: 18px;
-                                                      "
-                                                    >
-                                                      Lauren Harrison,
-                                                      Counsellor, Cohn & Wolfe
-                                                    </p>
-                                                  </div>
-                                                </div>
-                                              </div>
-                                            </li>
-                                          </ul>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="vc_empty_space" style="height: 25px">
-                              <span class="vc_empty_space_inner">
-                                <span class="empty_space_image"></span>
-                              </span>
                             </div>
                           </div>
                         </div>
@@ -1724,359 +1346,16 @@ const props = Astro.props;
                 </div>
                 <div
                   class="vc_row wpb_row section vc_row-fluid"
-                  style="background-color: #f2f2f2; text-align: center"
+                  style="text-align: left"
                 >
                   <div class="full_section_inner clearfix">
                     <div class="wpb_column vc_column_container vc_col-sm-12">
                       <div class="vc_column-inner">
                         <div class="wpb_wrapper">
-                          <div class="vc_empty_space" style="height: 50px">
+                          <div class="vc_empty_space" style="height: 32px">
                             <span class="vc_empty_space_inner">
                               <span class="empty_space_image"></span>
                             </span>
-                          </div>
-
-                          <div class="wpb_text_column wpb_content_element">
-                            <div class="wpb_wrapper">
-                              <h2>What We Do</h2>
-                            </div>
-                          </div>
-                          <div
-                            class="separator small center"
-                            style="background-color: #cc3333"
-                          >
-                          </div>
-                          <div class="vc_empty_space" style="height: 30px">
-                            <span class="vc_empty_space_inner">
-                              <span class="empty_space_image"></span>
-                            </span>
-                          </div>
-
-                          <div
-                            class="vc_row wpb_row section vc_row-fluid vc_inner grid_section"
-                            style="padding-top: 20pxpx; text-align: center"
-                          >
-                            <div class="section_inner clearfix">
-                              <div class="section_inner_margin clearfix">
-                                <div
-                                  class="wpb_column vc_column_container vc_col-sm-4"
-                                >
-                                  <div class="vc_column-inner">
-                                    <div class="wpb_wrapper">
-                                      <span
-                                        data-type="normal"
-                                        class="qode_icon_shortcode q_font_awsome_icon fa-3x"
-                                        style=""
-                                        ><i
-                                          class="qode_icon_font_awesome fa fa-magic qode_icon_element"
-                                          style=""></i></span
-                                      >
-                                      <div class="separator transparent"></div>
-
-                                      <div
-                                        class="wpb_text_column wpb_content_element"
-                                      >
-                                        <div class="wpb_wrapper">
-                                          <h3>Creative</h3>
-                                        </div>
-                                      </div>
-                                      <div
-                                        class="wpb_text_column wpb_content_element"
-                                      >
-                                        <div class="wpb_wrapper">
-                                          <p>
-                                            From scripting to casting, location
-                                            scouting to storyboarding and
-                                            everything in-between — we’ve got
-                                            you covered.
-                                          </p>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div
-                                  class="wpb_column vc_column_container vc_col-sm-4"
-                                >
-                                  <div class="vc_column-inner">
-                                    <div class="wpb_wrapper">
-                                      <span
-                                        data-type="normal"
-                                        class="qode_icon_shortcode q_font_awsome_icon fa-3x"
-                                        style=""
-                                        ><i
-                                          class="qode_icon_font_awesome fa fa-video-camera qode_icon_element"
-                                          style=""></i></span
-                                      >
-                                      <div class="separator transparent"></div>
-
-                                      <div
-                                        class="wpb_text_column wpb_content_element"
-                                      >
-                                        <div class="wpb_wrapper">
-                                          <h3>Production</h3>
-                                        </div>
-                                      </div>
-                                      <div
-                                        class="wpb_text_column wpb_content_element"
-                                      >
-                                        <div class="wpb_wrapper">
-                                          <p>
-                                            This is where our hard work in the
-                                            creative phase pays off. Whether
-                                            it’s a small shoot or large
-                                            production, we’ve got the know-how.
-                                          </p>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div
-                                  class="wpb_column vc_column_container vc_col-sm-4"
-                                >
-                                  <div class="vc_column-inner">
-                                    <div class="wpb_wrapper">
-                                      <span
-                                        data-type="normal"
-                                        class="qode_icon_shortcode q_font_awsome_icon fa-3x"
-                                        style=""
-                                        ><i
-                                          class="qode_icon_font_awesome fa fa-play qode_icon_element"
-                                          style=""></i></span
-                                      >
-                                      <div class="separator transparent"></div>
-
-                                      <div
-                                        class="wpb_text_column wpb_content_element"
-                                      >
-                                        <div class="wpb_wrapper">
-                                          <h3>Post-Production</h3>
-                                        </div>
-                                      </div>
-                                      <div
-                                        class="wpb_text_column wpb_content_element"
-                                      >
-                                        <div class="wpb_wrapper">
-                                          <p>
-                                            The most exciting phase of
-                                            production when your story comes to
-                                            life. Music, style, voice overs all
-                                            build the perfect piece.
-                                          </p>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="vc_empty_space" style="height: 50px">
-                            <span class="vc_empty_space_inner">
-                              <span class="empty_space_image"></span>
-                            </span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="vc_row wpb_row section vc_row-fluid"
-                  style="text-align: center"
-                >
-                  <div class="full_section_inner clearfix">
-                    <div class="wpb_column vc_column_container vc_col-sm-12">
-                      <div class="vc_column-inner">
-                        <div class="wpb_wrapper">
-                          <div class="vc_empty_space" style="height: 50px">
-                            <span class="vc_empty_space_inner">
-                              <span class="empty_space_image"></span>
-                            </span>
-                          </div>
-
-                          <div class="wpb_text_column wpb_content_element">
-                            <div class="wpb_wrapper">
-                              <h2>How We Work</h2>
-                            </div>
-                          </div>
-                          <div
-                            class="separator small center"
-                            style="background-color: #cc3333"
-                          >
-                          </div>
-                          <div class="vc_empty_space" style="height: 30px">
-                            <span class="vc_empty_space_inner">
-                              <span class="empty_space_image"></span>
-                            </span>
-                          </div>
-
-                          <div
-                            class="vc_row wpb_row section vc_row-fluid vc_inner grid_section"
-                            style="text-align: left"
-                          >
-                            <div class="section_inner clearfix">
-                              <div class="section_inner_margin clearfix">
-                                <div
-                                  class="wpb_column vc_column_container vc_col-sm-3"
-                                >
-                                  <div class="vc_column-inner">
-                                    <div class="wpb_wrapper">
-                                      <div
-                                        class="wpb_single_image wpb_content_element vc_align_left"
-                                      >
-                                        <div class="wpb_wrapper">
-                                          <div
-                                            class="vc_single_image-wrapper vc_box_border_grey"
-                                          >
-                                            <img
-                                              title=" "
-                                              width="300"
-                                              height="186"
-                                              src="/wp-content/uploads/2018/05/14567448_10154404208192400_5053909144292544586_o-300x186.jpg"
-                                              class="vc_single_image-img attachment-medium"
-                                              alt="SwitchFrame Media 14567448_10154404208192400_5053909144292544586_o-300x186  "
-                                              srcset="
-                                                /wp-content/uploads/2018/05/14567448_10154404208192400_5053909144292544586_o-300x186.jpg   300w,
-                                                /wp-content/uploads/2018/05/14567448_10154404208192400_5053909144292544586_o-768x476.jpg   768w,
-                                                /wp-content/uploads/2018/05/14567448_10154404208192400_5053909144292544586_o-1024x634.jpg 1024w,
-                                                /wp-content/uploads/2018/05/14567448_10154404208192400_5053909144292544586_o-700x434.jpg   700w,
-                                                /wp-content/uploads/2018/05/14567448_10154404208192400_5053909144292544586_o.jpg          1080w
-                                              "
-                                              sizes="(max-width: 300px) 100vw, 300px"
-                                            />
-                                          </div>
-                                        </div>
-                                      </div>
-                                      <div class="separator transparent"></div>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div
-                                  class="wpb_column vc_column_container vc_col-sm-9"
-                                >
-                                  <div class="vc_column-inner">
-                                    <div class="wpb_wrapper">
-                                      <div
-                                        class="wpb_text_column wpb_content_element"
-                                      >
-                                        <div class="wpb_wrapper">
-                                          <h3>
-                                            At SwitchFrame Media, we’re not only
-                                            about creating a great end product,
-                                            we also believe in providing a great
-                                            experience along the way.
-                                          </h3>
-                                        </div>
-                                      </div>
-                                      <div class="separator transparent"></div>
-
-                                      <div
-                                        class="wpb_text_column wpb_content_element"
-                                      >
-                                        <div class="wpb_wrapper">
-                                          <p>
-                                            We’re unique because we also do the
-                                            creative behind our video
-                                            productions. Traditionally, you
-                                            would work with a creative agency
-                                            for the ideas and a production
-                                            company to make the video. At
-                                            SwitchFrame Media we do both and we
-                                            do them both well.
-                                          </p>
-                                          <p>&nbsp;</p>
-                                          <p>
-                                            We provide better value for your
-                                            marketing budgets and proven ROI for
-                                            video productions.
-                                          </p>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="vc_empty_space" style="height: 50px">
-                            <span class="vc_empty_space_inner">
-                              <span class="empty_space_image"></span>
-                            </span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="vc_row wpb_row section vc_row-fluid vc_custom_1523472273767 grid_section"
-                  style="background-color: #cc3333; text-align: left"
-                >
-                  <div class="section_inner clearfix">
-                    <div class="section_inner_margin clearfix">
-                      <div class="wpb_column vc_column_container vc_col-sm-12">
-                        <div class="vc_column-inner">
-                          <div class="wpb_wrapper">
-                            <div
-                              class="vc_row wpb_row section vc_row-fluid vc_inner"
-                              style="text-align: center"
-                            >
-                              <div class="full_section_inner clearfix">
-                                <div
-                                  class="wpb_column vc_column_container vc_col-sm-2"
-                                >
-                                  <div class="vc_column-inner">
-                                    <div class="wpb_wrapper"></div>
-                                  </div>
-                                </div>
-                                <div
-                                  class="wpb_column vc_column_container vc_col-sm-8"
-                                >
-                                  <div class="vc_column-inner">
-                                    <div class="wpb_wrapper">
-                                      <div
-                                        class="wpb_text_column wpb_content_element"
-                                      >
-                                        <div class="wpb_wrapper">
-                                          <h1
-                                            style="
-                                              text-align: center;
-                                              color: #ffffff;
-                                            "
-                                          >
-                                            Ready to Get Started?
-                                          </h1>
-                                        </div>
-                                      </div>
-                                      <div class="separator transparent"></div>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div
-                                  class="wpb_column vc_column_container vc_col-sm-2"
-                                >
-                                  <div class="vc_column-inner">
-                                    <div class="wpb_wrapper">
-                                      <a
-                                        itemprop="url"
-                                        href="contact"
-                                        target="_self"
-                                        data-hover-background-color="#000000"
-                                        data-hover-color="#ffffff"
-                                        class="qbutton large white default"
-                                        style="
-                                          color: #cc3333;
-                                          background-color: #ffffff;
-                                        "
-                                        >Let's Go</a
-                                      >
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
                           </div>
                         </div>
                       </div>
@@ -2275,6 +1554,14 @@ const props = Astro.props;
         </footer>
       </div>
     </div>
+    <link
+      rel="stylesheet"
+      property="stylesheet"
+      id="rs-icon-set-fa-icon-css"
+      href="/wp-content/plugins/revslider/public/assets/fonts/font-awesome/css/font-awesome.css"
+      type="text/css"
+      media="all"
+    />
     <script type="text/javascript">
       function revslider_showDoubleJqueryError(sliderID) {
         var errorMessage =
