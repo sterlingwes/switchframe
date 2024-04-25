@@ -4,6 +4,12 @@ import type { ClientLogo, RenderedPortfolioProps } from "../types";
 interface Props {
   portfolioItems: (RenderedPortfolioProps["meta"] & { slug: string })[];
   clientLogos: ClientLogo[];
+  bannerVideo: {
+    id: string;
+    start: string;
+    end: string;
+    cover: string;
+  };
 }
 const props = Astro.props;
 ---
@@ -895,7 +901,7 @@ const props = Astro.props;
                                     data-easein="Power3.easeInOut"
                                     data-easeout="Power3.easeInOut"
                                     data-masterspeed="3000"
-                                    data-thumb="http://switchframemedia.com/wp-content/uploads/2018/05/Web-roll-V2-First-frame0-100x50.jpg"
+                                    data-thumb={props.bannerVideo.cover}
                                     data-rotate="0"
                                     data-saveperformance="off"
                                     data-title="Intro"
@@ -913,8 +919,8 @@ const props = Astro.props;
                                   >
                                     <!-- MAIN IMAGE -->
                                     <img
-                                      src="/wp-content/uploads/2018/05/Web-roll-V2-First-frame0.jpg"
-                                      alt="SwitchFrame Media Web-roll-V2-First-frame0  "
+                                      src={props.bannerVideo.cover}
+                                      alt="SwitchFrame Media Banner Video Backdrop"
                                       title=" "
                                       width="1920"
                                       height="1080"
@@ -930,14 +936,15 @@ const props = Astro.props;
                                     <div
                                       class="rs-background-video-layer"
                                       data-volume="mute"
-                                      data-ytid="cDz9q7pjybY"
+                                      data-ytid={props.bannerVideo.id}
                                       data-videoattributes="version=3&enablejsapi=1&html5=1&hd=1&wmode=opaque&showinfo=0&rel=0;;origin=http://switchframemedia.com;"
                                       data-videorate="1"
                                       data-videowidth="100%"
                                       data-videoheight="100%"
                                       data-videocontrols="none"
-                                      data-videostartat="00:00"
-                                      data-videoendat="00:20"
+                                      data-videostartat={props.bannerVideo
+                                        .start}
+                                      data-videoendat={props.bannerVideo.end}
                                       data-videoloop="loopandnoslidestop"
                                       data-forcecover="1"
                                       data-aspectratio="16:9"

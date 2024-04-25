@@ -15,6 +15,17 @@ const clients = await getCollection("clients");
 const index = clients.find((client) => client.slug === "index") ?? {
   data: { logos: [] } as { logos: ClientLogo[] },
 };
+
+const settings = await getCollection("settings");
+const bannerVideo = settings.find(
+  (setting) => setting.slug === "home-banner-vid"
+) ?? {
+  data: {} as any,
+};
 ---
 
-<HomeLayout clientLogos={index.data.logos} portfolioItems={portfolioItems} />
+<HomeLayout
+  clientLogos={index.data.logos ?? []}
+  portfolioItems={portfolioItems}
+  bannerVideo={bannerVideo.data}
+/>

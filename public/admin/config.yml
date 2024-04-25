@@ -13,7 +13,7 @@ backend:
   squash_merges: true
 collections:
   - name: "clients"
-    label: "Clients"
+    label: "Clients / Ordering"
     create: false
     files:
       - label: Carousel
@@ -58,3 +58,25 @@ collections:
       - { label: "Categories", name: "categories", widget: "list" }
       - { label: "Videos", name: "videos", widget: "list" }
       - { label: "About This Project", name: "body", widget: "markdown" }
+  - name: settings
+    label: Settings
+    create: false
+    files:
+      - label: Home Banner Video
+        name: home_banner_video
+        file: "src/content/settings/home-banner-vid.md"
+        editor:
+          preview: false
+        fields:
+          - label: Youtube Video ID
+            name: id
+            widget: string
+          - label: Start (from) time
+            name: start
+            widget: string
+          - label: End (to) time
+            name: end
+            widget: string
+          - label: Cover Image
+            name: cover
+            widget: image

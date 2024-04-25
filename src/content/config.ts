@@ -27,4 +27,14 @@ const portfolio = defineCollection({
   }),
 });
 
+const settings = defineCollection({
+  type: "content",
+  schema: z.object({
+    id: z.string().optional(),
+    start: z.string().optional(),
+    end: z.string().optional(),
+    cover: z.string().optional(),
+  }),
+});
+
 export const collections = { clients, portfolio };
