@@ -1,0 +1,9 @@
+---
+import { getCollection, getEntry } from "astro:content";
+import HomeLayout from "../layouts/HomeLayout.astro";
+
+const portfolio = await getCollection("portfolio");
+console.log(portfolio);
+---
+
+<HomeLayout />
