@@ -11,6 +11,18 @@ backend:
   base_url: https://decap.swj.io
   squash_merges: true
 collections:
+  - name: "clients"
+    label: "Clients"
+    file: "src/content/clients/index.md"
+    create: false
+    fields:
+      - label: Carousel
+        name: carousel
+        widget: list
+        fields:
+          - { label: "Name", name: "name", widget: "string" }
+          - { label: "Logo", name: "logo", widget: "image" }
+          - { label: "Website", name: "website", widget: "string" }
   - name: "portfolio" # Used in routes, e.g., /admin/collections/blog
     label: "Portfolio" # Used in the UI
     folder: "src/content/portfolio" # The path to the folder where the documents are stored
