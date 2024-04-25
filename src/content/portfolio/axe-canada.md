@@ -1,5 +1,5 @@
 ---
-title: AXE CANADA – 'MARCUS STROMAN'
+title: AXE CANADA – 'MARCUS STROMAN!!'
 thumbnail: https://switchframemedia.com/wp-content/uploads/2018/04/sf-work-axe.png
 client: AXE Canada
 categories:
