@@ -17,117 +17,37 @@ const props = Astro.props as Props;
     <link rel="profile" href="http://gmpg.org/xfn/11" />
     <link rel="pingback" href="/xmlrpc.php" />
 
-    <title>AXE Canada – ‘Marcus Stroman’ | SwitchFrame Media</title>
+    <title>{props.title} | SwitchFrame Media</title>
     <style type="text/css" id="stylesheet-inline-css-3023">
       .postid-3023.disabled_footer_top .footer_top_holder,
       .postid-3023.disabled_footer_bottom .footer_bottom_holder {
         display: none;
       }
     </style>
-    <!-- This site is optimized with the Yoast SEO plugin v11.1 - https://yoast.com/wordpress/plugins/seo/ -->
-    <link rel="canonical" href="/portfolio_page/axe-canada-marcus-stroman/" />
     <meta property="og:locale" content="en_US" />
     <meta property="og:type" content="article" />
-    <meta
-      property="og:title"
-      content="AXE Canada – ‘Marcus Stroman’ | SwitchFrame Media"
-    />
+    <meta property="og:title" content="{props.title} | SwitchFrame Media" />
     <meta
       property="og:description"
-      content="Look good. Smell good. Feel Good. Play good! ⚡ @axe @AXECanada#YouGotSomething #AXEPartner"
-    />
-    <meta
-      property="og:url"
-      content="/portfolio_page/axe-canada-marcus-stroman/"
+      content={`SwitchFrame case study for ${props.client}.`}
     />
     <meta property="og:site_name" content="SwitchFrame Media" />
     <meta
       property="article:publisher"
       content="https://www.facebook.com/SwitchFrameMedia/"
     />
-    <meta
-      property="og:image"
-      content="/wp-content/uploads/2018/04/sf-work-axe.png"
-    />
+    <meta property="og:image" content={props.thumbnail} />
     <meta property="og:image:width" content="850" />
     <meta property="og:image:height" content="450" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta
       name="twitter:description"
-      content="Look good. Smell good. Feel Good. Play good! ⚡ @axe @AXECanada#YouGotSomething #AXEPartner"
+      content={`SwitchFrame case study for ${props.client}.`}
     />
-    <meta
-      name="twitter:title"
-      content="AXE Canada – ‘Marcus Stroman’ | SwitchFrame Media"
-    />
+    <meta name="twitter:title" content="{props.title} | SwitchFrame Media" />
     <meta name="twitter:site" content="@SFrameMedia" />
-    <meta
-      name="twitter:image"
-      content="/wp-content/uploads/2018/04/sf-work-axe.png"
-    />
+    <meta name="twitter:image" content={props.thumbnail} />
     <meta name="twitter:creator" content="@SFrameMedia" />
-    <script
-      type="application/ld+json"
-      class="yoast-schema-graph yoast-schema-graph--main"
-    >
-      {
-        "@context": "https://schema.org",
-        "@graph": [
-          {
-            "@type": "Organization",
-            "@id": "/#organization",
-            "name": "SwitchFrame Media",
-            "url": "/",
-            "sameAs": [
-              "https://www.facebook.com/SwitchFrameMedia/",
-              "https://twitter.com/SFrameMedia"
-            ],
-            "logo": {
-              "@type": "ImageObject",
-              "@id": "/#logo",
-              "url": "/wp-content/uploads/2018/04/switchframe-media-logo-1.png",
-              "width": 162,
-              "height": 106,
-              "caption": "SwitchFrame Media"
-            },
-            "image": { "@id": "/#logo" }
-          },
-          {
-            "@type": "WebSite",
-            "@id": "/#website",
-            "url": "/",
-            "name": "SwitchFrame Media",
-            "publisher": { "@id": "/#organization" },
-            "potentialAction": {
-              "@type": "SearchAction",
-              "target": "/?s={search_term_string}",
-              "query-input": "required name=search_term_string"
-            }
-          },
-          {
-            "@type": "WebPage",
-            "@id": "/portfolio_page/axe-canada-marcus-stroman/#webpage",
-            "url": "/portfolio_page/axe-canada-marcus-stroman/",
-            "inLanguage": "en-US",
-            "name": "AXE Canada – ‘Marcus Stroman’ | SwitchFrame Media",
-            "isPartOf": { "@id": "/#website" },
-            "image": {
-              "@type": "ImageObject",
-              "@id": "/portfolio_page/axe-canada-marcus-stroman/#primaryimage",
-              "url": "/wp-content/uploads/2018/04/sf-work-axe.png",
-              "width": 850,
-              "height": 450
-            },
-            "primaryImageOfPage": {
-              "@id": "/portfolio_page/axe-canada-marcus-stroman/#primaryimage"
-            },
-            "datePublished": "2018-04-01T00:28:55+00:00",
-            "dateModified": "2018-05-16T17:53:05+00:00"
-          }
-        ]
-      }
-    </script>
-    <!-- / Yoast SEO plugin. -->
 
     <link rel="dns-prefetch" href="//fonts.googleapis.com" />
     <link rel="dns-prefetch" href="//s.w.org" />
@@ -562,35 +482,6 @@ const props = Astro.props as Props;
       };
       /* ]]> */
     </script>
-    <meta
-      name="generator"
-      content="Powered by LayerSlider 6.7.1 - Multi-Purpose, Responsive, Parallax, Mobile-Friendly Slider Plugin for WordPress."
-    />
-    <!-- LayerSlider updates and docs at: https://layerslider.kreaturamedia.com -->
-    <link rel="https://api.w.org/" href="/wp-json/" />
-    <link
-      rel="EditURI"
-      type="application/rsd+xml"
-      title="RSD"
-      href="/xmlrpc.php?rsd"
-    />
-    <link
-      rel="wlwmanifest"
-      type="application/wlwmanifest+xml"
-      href="/wp-includes/wlwmanifest.xml"
-    />
-    <meta name="generator" content="WordPress 4.9.22" />
-    <link rel="shortlink" href="/?p=3023" />
-    <link
-      rel="alternate"
-      type="application/json+oembed"
-      href="/wp-json/oembed/1.0/embed?url=http%3A%2F%2F%2Fportfolio_page%2Faxe-canada-marcus-stroman%2F"
-    />
-    <link
-      rel="alternate"
-      type="text/xml+oembed"
-      href="/wp-json/oembed/1.0/embed?url=http%3A%2F%2F%2Fportfolio_page%2Faxe-canada-marcus-stroman%2F#038;format=xml"
-    />
     <style type="text/css">
       .recentcomments a {
         display: inline !important;
@@ -906,7 +797,7 @@ const props = Astro.props as Props;
         <div class="content content_top_margin">
           <div class="meta">
             <div class="seo_title">
-              AXE Canada – ‘Marcus Stroman’ | SwitchFrame Media
+              {props.title} | SwitchFrame Media
             </div>
 
             <span id="qode_page_id">3023</span>
@@ -928,7 +819,7 @@ const props = Astro.props as Props;
                       <div class="title_subtitle_holder">
                         <div class="title_subtitle_holder_inner">
                           <h1 style="color: #000000">
-                            <span>AXE Canada – ‘Marcus Stroman’</span>
+                            <span>{props.title}</span>
                           </h1>
                           <span
                             class="separator small center"
