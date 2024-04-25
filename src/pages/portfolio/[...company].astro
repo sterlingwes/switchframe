@@ -1,0 +1,26 @@
+---
+import PortfolioPageLayout from "../../layouts/PortfolioPageLayout.astro";
+import type { RenderedPortfolioProps } from "../../types/portfolio.types";
+import { getCollection } from "astro:content";
+
+export async function getStaticPaths() {
+  const portfolioEntries = await getCollection("portfolio");
+  return portfolioEntries.reduce(async (chain, entry) => {
+    const acc = await chain;
+    const rendered = await entry.render();
+    return acc.concat({
+      params: { company: entry.slug },
+      props: { meta: entry.data, rendered },
+    });
+  }, Promise.resolve([]) as Promise<any[]>);
+}
+
+const {
+  meta,
+  rendered: { Content },
+} = Astro.props as RenderedPortfolioProps;
+---
+
+<PortfolioPageLayout {...meta}>
+  <Content />
+</PortfolioPageLayout>
