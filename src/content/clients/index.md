@@ -1,5 +1,5 @@
 ---
-carousel:
+logos:
   - name: AXE Canada
     logo: https://switchframemedia.com/wp-content/uploads/2018/04/sf-clients_0015_axe.png
     website: https://www.axe.com/"

@@ -3,7 +3,7 @@ import { z, defineCollection } from "astro:content";
 const clients = defineCollection({
   type: "content",
   schema: z.object({
-    carousel: z.array(
+    logos: z.array(
       z.object({
         name: z.string(),
         logo: z.string(),
