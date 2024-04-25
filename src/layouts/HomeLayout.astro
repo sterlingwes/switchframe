@@ -1,8 +1,11 @@
 ---
-import { getCollection, getEntry } from "astro:content";
+import type { ClientLogo, RenderedPortfolioProps } from "../types";
 
-const portfolio = await getCollection("portfolio");
-console.log(portfolio);
+interface Props {
+  portfolioItems: (RenderedPortfolioProps["meta"] & { slug: string })[];
+  clientLogos: ClientLogo[];
+}
+const props = Astro.props;
 ---
 
 <!DOCTYPE html>
@@ -1200,491 +1203,41 @@ console.log(portfolio);
                                 data-number-of-visible-items=""
                               >
                                 <ul class="slides">
-                                  <li class="item">
-                                    <div class="carousel_item_holder">
-                                      <a
-                                        itemprop="url"
-                                        href="https://www.axe.com/"
-                                        target="_blank"
-                                        ><span
-                                          class="first_image_holder has_hover_image"
-                                          ><img
-                                            title=" "
-                                            itemprop="image"
-                                            src="/wp-content/uploads/2018/04/sf-clients-bw_0015_axe.png"
-                                            alt="SwitchFrame Media sf-clients-bw_0015_axe  "
-                                          /></span
-                                        ><span
-                                          class="second_image_holder has_hover_image"
-                                          ><img
-                                            title=" "
-                                            itemprop="image"
-                                            src="/wp-content/uploads/2018/04/sf-clients_0015_axe.png"
-                                            alt="SwitchFrame Media sf-clients_0015_axe  "
-                                          /></span
-                                        ></a
-                                      >
-                                    </div>
-                                  </li>
-                                  <li class="item">
-                                    <div class="carousel_item_holder">
-                                      <a
-                                        itemprop="url"
-                                        href="http://www.curling.ca/"
-                                        target="_blank"
-                                        ><span
-                                          class="first_image_holder has_hover_image"
-                                          ><img
-                                            title=" "
-                                            itemprop="image"
-                                            src="/wp-content/uploads/2018/04/sf-clients-bw_0004_curlingcda.png"
-                                            alt="SwitchFrame Media sf-clients-bw_0004_curlingcda  "
-                                          /></span
-                                        ><span
-                                          class="second_image_holder has_hover_image"
-                                          ><img
-                                            title=" "
-                                            itemprop="image"
-                                            src="/wp-content/uploads/2018/04/sf-clients_0004_curlingcda.png"
-                                            alt="SwitchFrame Media sf-clients_0004_curlingcda  "
-                                          /></span
-                                        ></a
-                                      >
-                                    </div>
-                                  </li>
-                                  <li class="item">
-                                    <div class="carousel_item_holder">
-                                      <a
-                                        itemprop="url"
-                                        href="http://www.colemancanada.ca/"
-                                        target="_blank"
-                                        ><span
-                                          class="first_image_holder has_hover_image"
-                                          ><img
-                                            title=" "
-                                            itemprop="image"
-                                            src="/wp-content/uploads/2018/04/sf-clients-bw_0014_coleman.png"
-                                            alt="SwitchFrame Media sf-clients-bw_0014_coleman  "
-                                          /></span
-                                        ><span
-                                          class="second_image_holder has_hover_image"
-                                          ><img
-                                            title=" "
-                                            itemprop="image"
-                                            src="/wp-content/uploads/2018/04/sf-clients_0014_coleman.png"
-                                            alt="SwitchFrame Media sf-clients_0014_coleman  "
-                                          /></span
-                                        ></a
-                                      >
-                                    </div>
-                                  </li>
-                                  <li class="item">
-                                    <div class="carousel_item_holder">
-                                      <a
-                                        itemprop="url"
-                                        href="http://www.sunkist.com/"
-                                        target="_blank"
-                                        ><span
-                                          class="first_image_holder has_hover_image"
-                                          ><img
-                                            title=" "
-                                            itemprop="image"
-                                            src="/wp-content/uploads/2018/04/sf-clients-bw_0005_sunkist.png"
-                                            alt="SwitchFrame Media sf-clients-bw_0005_sunkist  "
-                                          /></span
-                                        ><span
-                                          class="second_image_holder has_hover_image"
-                                          ><img
-                                            title=" "
-                                            itemprop="image"
-                                            src="/wp-content/uploads/2018/04/sf-clients_0005_sunkist.png"
-                                            alt="SwitchFrame Media sf-clients_0005_sunkist  "
-                                          /></span
-                                        ></a
-                                      >
-                                    </div>
-                                  </li>
-                                  <li class="item">
-                                    <div class="carousel_item_holder">
-                                      <a
-                                        itemprop="url"
-                                        href="http://www.paypal.ca/"
-                                        target="_blank"
-                                        ><span
-                                          class="first_image_holder has_hover_image"
-                                          ><img
-                                            title=" "
-                                            itemprop="image"
-                                            src="/wp-content/uploads/2018/04/sf-clients-bw_0008_paypal.png"
-                                            alt="SwitchFrame Media sf-clients-bw_0008_paypal  "
-                                          /></span
-                                        ><span
-                                          class="second_image_holder has_hover_image"
-                                          ><img
-                                            title=" "
-                                            itemprop="image"
-                                            src="/wp-content/uploads/2018/04/sf-clients_0008_paypal.png"
-                                            alt="SwitchFrame Media sf-clients_0008_paypal  "
-                                          /></span
-                                        ></a
-                                      >
-                                    </div>
-                                  </li>
-                                  <li class="item">
-                                    <div class="carousel_item_holder">
-                                      <a
-                                        itemprop="url"
-                                        href="http://www.quickbooks.intuit.ca/"
-                                        target="_blank"
-                                        ><span
-                                          class="first_image_holder has_hover_image"
-                                          ><img
-                                            title=" "
-                                            itemprop="image"
-                                            src="/wp-content/uploads/2018/04/sf-clients-bw_0009_intuit.png"
-                                            alt="SwitchFrame Media sf-clients-bw_0009_intuit  "
-                                          /></span
-                                        ><span
-                                          class="second_image_holder has_hover_image"
-                                          ><img
-                                            title=" "
-                                            itemprop="image"
-                                            src="/wp-content/uploads/2018/04/sf-clients_0009_intuit.png"
-                                            alt="SwitchFrame Media sf-clients_0009_intuit  "
-                                          /></span
-                                        ></a
-                                      >
-                                    </div>
-                                  </li>
-                                  <li class="item">
-                                    <div class="carousel_item_holder">
-                                      <a
-                                        itemprop="url"
-                                        href="http://www.edelman.ca/"
-                                        target="_blank"
-                                        ><span
-                                          class="first_image_holder has_hover_image"
-                                          ><img
-                                            title=" "
-                                            itemprop="image"
-                                            src="/wp-content/uploads/2018/04/sf-clients-bw_0013_edelman.png"
-                                            alt="SwitchFrame Media sf-clients-bw_0013_edelman  "
-                                          /></span
-                                        ><span
-                                          class="second_image_holder has_hover_image"
-                                          ><img
-                                            title=" "
-                                            itemprop="image"
-                                            src="/wp-content/uploads/2018/04/sf-clients_0013_edelman.png"
-                                            alt="SwitchFrame Media sf-clients_0013_edelman  "
-                                          /></span
-                                        ></a
-                                      >
-                                    </div>
-                                  </li>
-                                  <li class="item">
-                                    <div class="carousel_item_holder">
-                                      <a
-                                        itemprop="url"
-                                        href="http://www.indie88.com/"
-                                        target="_blank"
-                                        ><span
-                                          class="first_image_holder has_hover_image"
-                                          ><img
-                                            title=" "
-                                            itemprop="image"
-                                            src="/wp-content/uploads/2018/04/sf-clients-bw_0012_Indie88.png"
-                                            alt="SwitchFrame Media sf-clients-bw_0012_Indie88  "
-                                          /></span
-                                        ><span
-                                          class="second_image_holder has_hover_image"
-                                          ><img
-                                            title=" "
-                                            itemprop="image"
-                                            src="/wp-content/uploads/2018/04/sf-clients_0012_Indie88.png"
-                                            alt="SwitchFrame Media sf-clients_0012_Indie88  "
-                                          /></span
-                                        ></a
-                                      >
-                                    </div>
-                                  </li>
-                                  <li class="item">
-                                    <div class="carousel_item_holder">
-                                      <a
-                                        itemprop="url"
-                                        href="http://www.nintendo.com/"
-                                        target="_blank"
-                                        ><span
-                                          class="first_image_holder has_hover_image"
-                                          ><img
-                                            title=" "
-                                            itemprop="image"
-                                            src="/wp-content/uploads/2018/04/sf-clients-bw_0010_nintendo.png"
-                                            alt="SwitchFrame Media sf-clients-bw_0010_nintendo  "
-                                          /></span
-                                        ><span
-                                          class="second_image_holder has_hover_image"
-                                          ><img
-                                            title=" "
-                                            itemprop="image"
-                                            src="/wp-content/uploads/2018/04/sf-clients_0010_nintendo.png"
-                                            alt="SwitchFrame Media sf-clients_0010_nintendo  "
-                                          /></span
-                                        ></a
-                                      >
-                                    </div>
-                                  </li>
-                                  <li class="item">
-                                    <div class="carousel_item_holder">
-                                      <a
-                                        itemprop="url"
-                                        href="http://www.jnjcanada.com/"
-                                        target="_blank"
-                                        ><span
-                                          class="first_image_holder has_hover_image"
-                                          ><img
-                                            title=" "
-                                            itemprop="image"
-                                            src="/wp-content/uploads/2018/04/sf-clients-bw_0011_johnson-and-johnson.png"
-                                            alt="SwitchFrame Media sf-clients-bw_0011_johnson-and-johnson  "
-                                          /></span
-                                        ><span
-                                          class="second_image_holder has_hover_image"
-                                          ><img
-                                            title=" "
-                                            itemprop="image"
-                                            src="/wp-content/uploads/2018/04/sf-clients_0011_johnson-and-johnson.png"
-                                            alt="SwitchFrame Media sf-clients_0011_johnson-and-johnson  "
-                                          /></span
-                                        ></a
-                                      >
-                                    </div>
-                                  </li>
-                                  <li class="item">
-                                    <div class="carousel_item_holder">
-                                      <a
-                                        itemprop="url"
-                                        href="http://www.sunbeam.ca/"
-                                        target="_blank"
-                                        ><span
-                                          class="first_image_holder has_hover_image"
-                                          ><img
-                                            title=" "
-                                            itemprop="image"
-                                            src="/wp-content/uploads/2018/04/sf-clients-bw_0003_sunbeam.png"
-                                            alt="SwitchFrame Media sf-clients-bw_0003_sunbeam  "
-                                          /></span
-                                        ><span
-                                          class="second_image_holder has_hover_image"
-                                          ><img
-                                            title=" "
-                                            itemprop="image"
-                                            src="/wp-content/uploads/2018/04/sf-clients_0003_sunbeam.png"
-                                            alt="SwitchFrame Media sf-clients_0003_sunbeam  "
-                                          /></span
-                                        ></a
-                                      >
-                                    </div>
-                                  </li>
-                                  <li class="item">
-                                    <div class="carousel_item_holder">
-                                      <a
-                                        itemprop="url"
-                                        href="http://www.unilever.ca/"
-                                        target="_blank"
-                                        ><span class="first_image_holder"
-                                          ><img
-                                            title=" "
-                                            itemprop="image"
-                                            src="/wp-content/uploads/2018/04/sf-clients-bw_0002_unilever.png"
-                                            alt="SwitchFrame Media sf-clients-bw_0002_unilever  "
-                                          /></span
-                                        ></a
-                                      >
-                                    </div>
-                                  </li>
-                                  <li class="item">
-                                    <div class="carousel_item_holder">
-                                      <a
-                                        itemprop="url"
-                                        href="http://www.cohnwolfe.ca/"
-                                        target="_blank"
-                                        ><span
-                                          class="first_image_holder has_hover_image"
-                                          ><img
-                                            title=" "
-                                            itemprop="image"
-                                            src="/wp-content/uploads/2018/04/sf-clients-bw_0016_cohn-wolfe.png"
-                                            alt="SwitchFrame Media sf-clients-bw_0016_cohn-wolfe  "
-                                          /></span
-                                        ><span
-                                          class="second_image_holder has_hover_image"
-                                          ><img
-                                            title=" "
-                                            itemprop="image"
-                                            src="/wp-content/uploads/2018/04/sf-clients_0016_cohn-wolfe.png"
-                                            alt="SwitchFrame Media sf-clients_0016_cohn-wolfe  "
-                                          /></span
-                                        ></a
-                                      >
-                                    </div>
-                                  </li>
-                                  <li class="item">
-                                    <div class="carousel_item_holder">
-                                      <a
-                                        itemprop="url"
-                                        href="https://www.astrazeneca.ca/"
-                                        target="_blank"
-                                        ><span
-                                          class="first_image_holder has_hover_image"
-                                          ><img
-                                            title=" "
-                                            itemprop="image"
-                                            src="/wp-content/uploads/2018/04/sf-clients-bw_0019_AstraZeneca.png"
-                                            alt="SwitchFrame Media sf-clients-bw_0019_AstraZeneca  "
-                                          /></span
-                                        ><span
-                                          class="second_image_holder has_hover_image"
-                                          ><img
-                                            title=" "
-                                            itemprop="image"
-                                            src="/wp-content/uploads/2018/04/sf-clients_0019_AstraZeneca.png"
-                                            alt="SwitchFrame Media sf-clients_0019_AstraZeneca  "
-                                          /></span
-                                        ></a
-                                      >
-                                    </div>
-                                  </li>
-                                  <li class="item">
-                                    <div class="carousel_item_holder">
-                                      <a
-                                        itemprop="url"
-                                        href="http://www.progressivewaste.com/"
-                                        target="_blank"
-                                        ><span
-                                          class="first_image_holder has_hover_image"
-                                          ><img
-                                            title=" "
-                                            itemprop="image"
-                                            src="/wp-content/uploads/2018/04/sf-clients-bw_0007_progressive.png"
-                                            alt="SwitchFrame Media sf-clients-bw_0007_progressive  "
-                                          /></span
-                                        ><span
-                                          class="second_image_holder has_hover_image"
-                                          ><img
-                                            title=" "
-                                            itemprop="image"
-                                            src="/wp-content/uploads/2018/04/sf-clients_0007_progressive.png"
-                                            alt="SwitchFrame Media sf-clients_0007_progressive  "
-                                          /></span
-                                        ></a
-                                      >
-                                    </div>
-                                  </li>
-                                  <li class="item">
-                                    <div class="carousel_item_holder">
-                                      <a
-                                        itemprop="url"
-                                        href="http://www.richardsongmp.com/"
-                                        target="_blank"
-                                        ><span
-                                          class="first_image_holder has_hover_image"
-                                          ><img
-                                            title=" "
-                                            itemprop="image"
-                                            src="/wp-content/uploads/2018/04/sf-clients-bw_0006_richardson.png"
-                                            alt="SwitchFrame Media sf-clients-bw_0006_richardson  "
-                                          /></span
-                                        ><span
-                                          class="second_image_holder has_hover_image"
-                                          ><img
-                                            title=" "
-                                            itemprop="image"
-                                            src="/wp-content/uploads/2018/04/sf-clients_0006_richardson.png"
-                                            alt="SwitchFrame Media sf-clients_0006_richardson  "
-                                          /></span
-                                        ></a
-                                      >
-                                    </div>
-                                  </li>
-                                  <li class="item">
-                                    <div class="carousel_item_holder">
-                                      <a
-                                        itemprop="url"
-                                        href="http://www.timhortons.com/"
-                                        target="_blank"
-                                        ><span
-                                          class="first_image_holder has_hover_image"
-                                          ><img
-                                            title=" "
-                                            itemprop="image"
-                                            src="/wp-content/uploads/2018/04/sf-clients-bw_0017_tim-hortons.png"
-                                            alt="SwitchFrame Media sf-clients-bw_0017_tim-hortons  "
-                                          /></span
-                                        ><span
-                                          class="second_image_holder has_hover_image"
-                                          ><img
-                                            title=" "
-                                            itemprop="image"
-                                            src="/wp-content/uploads/2018/04/sf-clients_0017_tim-hortons.png"
-                                            alt="SwitchFrame Media sf-clients_0017_tim-hortons  "
-                                          /></span
-                                        ></a
-                                      >
-                                    </div>
-                                  </li>
-                                  <li class="item">
-                                    <div class="carousel_item_holder">
-                                      <a
-                                        itemprop="url"
-                                        href="https://www.ups.com/"
-                                        target="_blank"
-                                        ><span
-                                          class="first_image_holder has_hover_image"
-                                          ><img
-                                            title=" "
-                                            itemprop="image"
-                                            src="/wp-content/uploads/2018/04/sf-clients-bw_0018_UPS.png"
-                                            alt="SwitchFrame Media sf-clients-bw_0018_UPS  "
-                                          /></span
-                                        ><span
-                                          class="second_image_holder has_hover_image"
-                                          ><img
-                                            title=" "
-                                            itemprop="image"
-                                            src="/wp-content/uploads/2018/04/sf-clients_0018_UPS.png"
-                                            alt="SwitchFrame Media sf-clients_0018_UPS  "
-                                          /></span
-                                        ></a
-                                      >
-                                    </div>
-                                  </li>
-                                  <li class="item">
-                                    <div class="carousel_item_holder">
-                                      <a
-                                        itemprop="url"
-                                        href="http://www.scotiabank.com/"
-                                        target="_blank"
-                                        ><span
-                                          class="first_image_holder has_hover_image"
-                                          ><img
-                                            title=" "
-                                            itemprop="image"
-                                            src="/wp-content/uploads/2018/04/sf-clients-bw_0001_scotiabank.png"
-                                            alt="SwitchFrame Media sf-clients-bw_0001_scotiabank  "
-                                          /></span
-                                        ><span
-                                          class="second_image_holder has_hover_image"
-                                          ><img
-                                            title=" "
-                                            itemprop="image"
-                                            src="/wp-content/uploads/2018/04/sf-clients_0001_scotiabank.png"
-                                            alt="SwitchFrame Media sf-clients_0001_scotiabank  "
-                                          /></span
-                                        ></a
-                                      >
-                                    </div>
-                                  </li>
+                                  {
+                                    props.clientLogos.map((logo) => (
+                                      <li class="item">
+                                        <div class="carousel_item_holder">
+                                          <a
+                                            itemprop="url"
+                                            href={logo.website}
+                                            target="_blank"
+                                          >
+                                            <>
+                                              <span
+                                                class="first_image_holder has_hover_image"
+                                                style="filter: grayscale(100%);"
+                                              >
+                                                <img
+                                                  title={logo.name}
+                                                  itemprop="image"
+                                                  src={logo.logo}
+                                                  alt={logo.name}
+                                                />
+                                              </span>
+                                              <span class="second_image_holder has_hover_image">
+                                                <img
+                                                  title={logo.name}
+                                                  itemprop="image"
+                                                  src={logo.logo}
+                                                  alt={logo.name}
+                                                />
+                                              </span>
+                                            </>
+                                          </a>
+                                        </div>
+                                      </li>
+                                    ))
+                                  }
                                 </ul>
                               </div>
                             </div>
@@ -1741,9 +1294,93 @@ console.log(portfolio);
                                   class="q_elements_item_content q_elements_holder_custom_480185"
                                   style="padding: 0 12px"
                                 >
+                                  <style type="text/css">
+                                    .projects_holder {
+                                      display: flex;
+                                      flex-wrap: wrap;
+                                      justify-content: space-between;
+                                    }
+                                  </style>
                                   <div
                                     class="projects_holder_outer v3 portfolio_with_space portfolio_with_hover_text"
                                   >
+                                    <div
+                                      class="projects_holder portfolio_main_holder clearfix v3 hover_text portfolio_full_image"
+                                    >
+                                      {
+                                        props.portfolioItems.map((item) => (
+                                          <article
+                                            class="mix portfolio_category_17 portfolio_category_33"
+                                            style=""
+                                          >
+                                            <div class="image_holder">
+                                              <>
+                                                <a
+                                                  itemprop="url"
+                                                  class="portfolio_link_for_touch"
+                                                  href={`/portfolio/${item.slug}`}
+                                                  target="_self"
+                                                >
+                                                  <span class="image">
+                                                    <img
+                                                      title=" "
+                                                      alt={item.title}
+                                                      width="850"
+                                                      height="450"
+                                                      src={item.thumbnail}
+                                                      class="attachment-full size-full wp-post-image"
+                                                      srcset={`
+                                                        ${item.thumbnail} 850w,
+                                                        ${item.thumbnail} 300w,
+                                                        ${item.thumbnail} 768w,
+                                                        ${item.thumbnail} 700w
+                                                      `}
+                                                      sizes="(max-width: 850px) 100vw, 850px"
+                                                    />
+                                                  </span>
+                                                </a>
+                                                <span class="text_holder">
+                                                  <span class="text_outer">
+                                                    <span class="text_inner">
+                                                      <div class="hover_feature_holder_title">
+                                                        <div class="hover_feature_holder_title_inner">
+                                                          <h5
+                                                            itemprop="name"
+                                                            class="portfolio_title entry_title"
+                                                          >
+                                                            <a
+                                                              itemprop="url"
+                                                              href={`/portfolio/${item.slug}`}
+                                                              style="color: #ffffff"
+                                                              target="_self"
+                                                            >
+                                                              {item.title}
+                                                            </a>
+                                                          </h5>
+                                                          <span
+                                                            class="project_category"
+                                                            style="color: #ffffff"
+                                                          >
+                                                            {item.categories.join(
+                                                              ", "
+                                                            )}
+                                                          </span>
+                                                        </div>
+                                                      </div>
+                                                      <span class="feature_holder" />
+                                                    </span>
+                                                  </span>
+                                                </span>
+                                              </>
+                                            </div>
+                                          </article>
+                                        ))
+                                      }
+                                      <div class="filler"></div><div
+                                        class="filler"
+                                      >
+                                      </div><div class="filler"></div>
+                                    </div>
                                   </div>
                                 </div>
                               </div>

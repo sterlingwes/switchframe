@@ -1,9 +1,20 @@
 ---
 import { getCollection, getEntry } from "astro:content";
 import HomeLayout from "../layouts/HomeLayout.astro";
+import type { ClientLogo } from "../types";
 
 const portfolio = await getCollection("portfolio");
-console.log(portfolio);
+const portfolioItems = portfolio
+  .map((item) => ({
+    ...item.data,
+    slug: item.slug,
+  }))
+  .slice(0, 6);
+
+const clients = await getCollection("clients");
+const index = clients.find((client) => client.slug === "index") ?? {
+  data: { logos: [] } as { logos: ClientLogo[] },
+};
 ---
 
-<HomeLayout />
+<HomeLayout clientLogos={index.data.logos} portfolioItems={portfolioItems} />
