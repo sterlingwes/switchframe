@@ -4,7 +4,7 @@ thumbnail: https://switchframemedia.com/wp-content/uploads/2018/04/sf-work-intui
 client: Intuit
 categories:
   - Creative
-  - CaseStudy
+  - Case_Study
 videos:
   - https://www.youtube.com/embed/8fy2LZbJezE?wmode=transparent
   - https://www.youtube.com/embed/PuZnQHK2eN4?wmode=transparent
