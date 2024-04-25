@@ -9,6 +9,7 @@ backend:
   branch: main
   repo: "sterlingwes/switchframe"
   base_url: https://decap.swj.io
+  squash_merges: true
 collections:
   - name: "portfolio" # Used in routes, e.g., /admin/collections/blog
     label: "Portfolio" # Used in the UI
