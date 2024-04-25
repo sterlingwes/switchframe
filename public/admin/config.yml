@@ -1,7 +1,7 @@
 site_url: https://switchframemedia.com
 logo_url: https://switchframemedia.com/wp-content/uploads/2018/04/switchframe-media-logo-1.png
 search: false
-publish_mode: simple
+publish_mode: editorial_workflow
 media_folder: "public/assets" # Location where files will be stored in the repo
 public_folder: "assets" # The src attribute for uploaded media
 backend:
