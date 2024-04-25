@@ -3,7 +3,7 @@ logo_url: https://switchframemedia.com/wp-content/uploads/2018/04/switchframe-me
 search: false
 publish_mode: editorial_workflow
 media_folder: "public/assets" # Location where files will be stored in the repo
-public_folder: "assets" # The src attribute for uploaded media
+public_folder: "/assets" # The src attribute for uploaded media
 show_preview_links: false
 backend:
   name: github
