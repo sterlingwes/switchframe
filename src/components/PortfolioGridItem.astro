@@ -1,0 +1,71 @@
+---
+interface Props {
+  title: string;
+  slug: string;
+  thumbnail: string;
+  categories: string[];
+  filterCategories: string[];
+}
+const item = Astro.props as Props;
+---
+
+<article
+  class={`mix ${item.filterCategories.join(" ")}`}
+  style="aspect-ratio: 1.888; overflow: hidden;"
+>
+  <div class="image_holder">
+    <>
+      <a
+        itemprop="url"
+        class="portfolio_link_for_touch"
+        href={`/portfolio/${item.slug}`}
+        target="_self"
+      >
+        <span class="image">
+          <img
+            title=" "
+            alt={item.title}
+            width="850"
+            height="450"
+            src={item.thumbnail}
+            class="attachment-full size-full wp-post-image"
+            srcset={`
+              ${item.thumbnail} 850w,
+              ${item.thumbnail} 300w,
+              ${item.thumbnail} 768w,
+              ${item.thumbnail} 700w
+            `}
+            sizes="(max-width: 850px) 100vw, 850px"
+          />
+        </span>
+      </a>
+      <span class="text_holder">
+        <a
+          itemprop="url"
+          href={`/portfolio/${item.slug}`}
+          style="color: #ffffff; position: absolute; top: 0; left: 0; bottom: 0; right: 0;"
+          target="_self"
+        >
+          <span class="text_outer">
+            <span class="text_inner">
+              <div class="hover_feature_holder_title">
+                <div class="hover_feature_holder_title_inner">
+                  <h5
+                    itemprop="name"
+                    class="portfolio_title entry_title"
+                    style="color: #fff"
+                  >
+                    {item.title}
+                  </h5>
+                  <span class="project_category" style="color: #ffffff">
+                    {item.categories.join(", ")}
+                  </span>
+                </div>
+              </div>
+            </span>
+          </span>
+        </a>
+      </span>
+    </>
+  </div>
+</article>
