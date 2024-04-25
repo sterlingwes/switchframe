@@ -2,13 +2,15 @@ import { z, defineCollection } from "astro:content";
 
 const clients = defineCollection({
   type: "content",
-  schema: z.array(
-    z.object({
-      name: z.string(),
-      logo: z.string(),
-      website: z.string(),
-    })
-  ),
+  schema: z.object({
+    carousel: z.array(
+      z.object({
+        name: z.string(),
+        logo: z.string(),
+        website: z.string(),
+      })
+    ),
+  }),
 });
 
 const portfolio = defineCollection({
