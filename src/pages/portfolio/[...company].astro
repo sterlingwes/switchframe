@@ -1,14 +1,20 @@
 ---
 import PortfolioPageLayout from "../../layouts/PortfolioPageLayout.astro";
 import { normalizeCategory } from "../../lib/categories";
+import {
+  getCachedPortfolioEntries,
+  getRelatedItems,
+} from "../../lib/portfolio-page";
 import type { RenderedPortfolioProps } from "../../types/portfolio.types";
-import { getCollection } from "astro:content";
 
 export async function getStaticPaths() {
-  const portfolioEntries = await getCollection("portfolio");
-  return portfolioEntries.reduce(async (chain, entry) => {
+  const portfolioEntries = await getCachedPortfolioEntries();
+
+  return portfolioEntries.reduce(async (chain, entry, i) => {
     const acc = await chain;
     const rendered = await entry.render();
+    const { relatedItems, last, next } = await getRelatedItems(entry, i);
+
     return acc.concat({
       params: { company: entry.slug },
       props: {
@@ -17,17 +23,29 @@ export async function getStaticPaths() {
           categories: entry.data.categories.map(normalizeCategory),
         },
         rendered,
+        relatedItems,
+        lastItem: last,
+        nextItem: next,
       },
     });
   }, Promise.resolve([]) as Promise<any[]>);
 }
 
+type RelatedResult = Awaited<ReturnType<typeof getRelatedItems>>;
+
 const {
   meta,
   rendered: { Content },
-} = Astro.props as RenderedPortfolioProps;
+  relatedItems,
+  lastItem,
+  nextItem,
+} = Astro.props as RenderedPortfolioProps & {
+  relatedItems: RelatedResult["relatedItems"];
+  lastItem: RelatedResult["last"];
+  nextItem: RelatedResult["next"];
+};
 ---
 
-<PortfolioPageLayout {...meta}>
+<PortfolioPageLayout {...{ ...meta, relatedItems, lastItem, nextItem }}>
   <Content />
 </PortfolioPageLayout>

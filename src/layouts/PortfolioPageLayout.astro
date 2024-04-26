@@ -1,6 +1,12 @@
 ---
 import type { RenderedPortfolioProps } from "../types/portfolio.types";
-type Props = {} & RenderedPortfolioProps["meta"];
+import type { getRelatedItems } from "../lib/portfolio-page";
+type RelatedResult = Awaited<ReturnType<typeof getRelatedItems>>;
+type Props = {
+  relatedItems: RelatedResult['relatedItems'];
+  lastItem: RelatedResult['last'];
+  nextItem: RelatedResult['next'];
+} & RenderedPortfolioProps["meta"];
 const props = Astro.props as Props;
 ---
 
@@ -858,12 +864,14 @@ const props = Astro.props as Props;
                         <div
                           class="portfolio_detail portfolio_single_follow clearfix"
                         >
-                          {props.client && (
-                            <div class="info portfolio_custom_field">
-                              <h6>Client</h6>
-                              <p>{props.client}</p>
-                            </div>
-                          )}
+                          {
+                            props.client && (
+                              <div class="info portfolio_custom_field">
+                                <h6>Client</h6>
+                                <p>{props.client}</p>
+                              </div>
+                            )
+                          }
                           <div class="info portfolio_categories">
                             <h6>Category</h6>
                             <span class="category"
@@ -877,6 +885,146 @@ const props = Astro.props as Props;
                           <div class="portfolio_social_holder"></div>
                         </div>
                       </div>
+                    </div>
+                  </div>
+
+                  <div class="portfolio_navigation navigation_title">
+                    <div class="portfolio_prev">
+                      {
+                        props.lastItem && (
+                          <a
+                            href={`/portfolio/${props.lastItem.slug}/`}
+                            rel="prev"
+                          >
+                            <>
+                              <i class="fa fa-angle-left" />
+                              <span class="post_info">
+                                <>
+                                  <span class="categories">
+                                    {props.lastItem.categories.join(", ")}
+                                  </span>
+                                  <span class="h5">{props.lastItem.title}</span>
+                                </>
+                              </span>
+                            </>
+                          </a>
+                        )
+                      }
+                    </div>
+                    <div class="portfolio_button">
+                      <a itemprop="url" href="/new/portfolio/"></a>
+                    </div>
+                    <div class="portfolio_next">
+                      {
+                        props.nextItem && (
+                          <a
+                            href={`/portfolio/${props.nextItem.slug}/`}
+                            rel="next"
+                          >
+                            <>
+                              <span class="post_info">
+                                <>
+                                  <span class="categories">
+                                    {props.nextItem.categories.join(", ")}
+                                  </span>
+                                  <span class="h5">{props.nextItem.title}</span>
+                                </>
+                              </span>
+                              <i class="fa fa-angle-right" />
+                            </>
+                          </a>
+                        )
+                      }
+                    </div>
+                  </div>
+                </div>
+
+                <div class="qode_portfolio_related">
+                  <h4>Related Projects</h4>
+
+                  <div
+                    class="projects_holder_outer v4 portfolio_with_space portfolio_standard"
+                  >
+                    <style type="text/css">
+                      .projects_holder {
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: space-between;
+                      }
+                    </style>
+                    <div class="projects_holder clearfix v4 standard">
+                      {
+                        props.relatedItems.map((related) => (
+                          <article class="mix">
+                            <div class="image_holder">
+                              <a
+                                itemprop="url"
+                                class="portfolio_link_for_touch"
+                                href={`/portfolio/${related.slug}/`}
+                              >
+                                <span class="image">
+                                  <img
+                                    title=" "
+                                    width="1600"
+                                    height="1000"
+                                    src={related.thumbnail}
+                                    style="aspect-ratio: 1.888; overflow: hidden;"
+                                    class="attachment-full size-full wp-post-image"
+                                    alt={related.title}
+                                    srcset={`
+                                      ${related.thumbnail}          1600w,
+                                      ${related.thumbnail}   300w,
+                                      ${related.thumbnail}   768w,
+                                      ${related.thumbnail} 1024w,
+                                      ${related.thumbnail}   700w
+                                    `}
+                                    sizes="(max-width: 1600px) 100vw, 1600px"
+                                  />
+                                </span>
+                              </a>
+                              <span class="text_holder">
+                                <span class="text_outer">
+                                  <span class="text_inner">
+                                    <span class="feature_holder">
+                                      <span class="feature_holder_icons">
+                                        <a
+                                          itemprop="url"
+                                          class="preview qbutton small white"
+                                          href={`/portfolio/${related.slug}/`}
+                                          target="_self"
+                                        >
+                                          view
+                                        </a>
+                                      </span>
+                                    </span>
+                                  </span>
+                                </span>
+                              </span>
+                            </div>
+                            <div class="portfolio_description">
+                              <h5
+                                itemprop="name"
+                                class="portfolio_title entry_title"
+                              >
+                                <a
+                                  itemprop="url"
+                                  href={`/portfolio/${related.slug}/`}
+                                >
+                                  {related.title}
+                                </a>
+                              </h5>
+                              <span class="project_category">
+                                {related.categories.join(", ")}
+                              </span>
+                            </div>
+                          </article>
+                        ))
+                      }
+
+                      <div class="filler"></div>
+                      <div class="filler"></div>
+                      <div class="filler"></div>
+                      <div class="filler"></div>
                     </div>
                   </div>
                 </div>
