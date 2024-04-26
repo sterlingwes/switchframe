@@ -858,10 +858,12 @@ const props = Astro.props as Props;
                         <div
                           class="portfolio_detail portfolio_single_follow clearfix"
                         >
-                          <div class="info portfolio_custom_field">
-                            <h6>Client</h6>
-                            <p>{props.client}</p>
-                          </div>
+                          {props.client && (
+                            <div class="info portfolio_custom_field">
+                              <h6>Client</h6>
+                              <p>{props.client}</p>
+                            </div>
+                          )}
                           <div class="info portfolio_categories">
                             <h6>Category</h6>
                             <span class="category"
