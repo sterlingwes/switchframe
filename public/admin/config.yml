@@ -16,7 +16,7 @@ collections:
     label: "Clients / Ordering"
     create: false
     files:
-      - label: Carousel
+      - label: Logo Carousel
         name: carousel
         file: "src/content/clients/index.md"
         editor:
