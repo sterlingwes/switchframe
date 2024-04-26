@@ -12,7 +12,7 @@ const clients = defineCollection({
         })
       )
       .optional(),
-    order: z.array(z.object({})).optional(),
+    order: z.array(z.object({ item: z.string() })).optional(),
   }),
 });
 
