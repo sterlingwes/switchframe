@@ -5,7 +5,7 @@ client: Curling Canada
 categories:
   - Creative
 videos:
-  - https://youtu.be/aYEj1eXC9HQ?wmode=transparent
+  - https://www.youtube.com/embed/aYEj1eXC9HQ?wmode=transparent
   - ""
 ---
 
