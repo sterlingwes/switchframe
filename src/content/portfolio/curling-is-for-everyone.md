@@ -5,7 +5,8 @@ client: Curling Canada
 categories:
   - Creative
 videos:
-  - https://youtu.be/aYEj1eXC9HQ
+  - https://youtu.be/aYEj1eXC9HQ?wmode=transparent
+  - ""
 ---
 
 Need to write something about this project in this section.
