@@ -28,6 +28,7 @@ const item = Astro.props as Props;
             width="850"
             height="450"
             src={item.thumbnail}
+            loading="lazy"
             class="attachment-full size-full wp-post-image"
             srcset={`
               ${item.thumbnail} 850w,
