@@ -1,35 +1,10 @@
 ---
-import { getCollection, getEntry } from "astro:content";
+import { getCollection } from "astro:content";
 import HomeLayout from "../../layouts/HomeLayout.astro";
 import type { ClientLogo } from "../../types";
-import { normalizeCategory } from "../../lib/categories";
+import { getPortfolioItems } from "../../lib/portfolio-list";
 
-const portfolio = await getCollection("portfolio");
-let portfolioItems = portfolio.map((item) => {
-  const categories = item.data.categories.map(normalizeCategory);
-  return {
-    ...item.data,
-    categories,
-    filterCategories: [],
-    slug: item.slug,
-  };
-});
-const clientsCollection = await getCollection("clients");
-const portfolioOrder = (
-  clientsCollection.find((client) => client.slug === "index-portfolio")?.data
-    .order || ([] as Array<{ item: string }>)
-).map(({ item }) => item);
-portfolioItems = portfolioItems
-  .slice()
-  .sort((a, b) => {
-    const aIndex = portfolioOrder.indexOf(a.title);
-    const bIndex = portfolioOrder.indexOf(b.title);
-    if (aIndex === -1 && bIndex === -1) return a.title.localeCompare(b.title);
-    if (aIndex === -1) return 1;
-    if (bIndex === -1) return -1;
-    return aIndex - bIndex;
-  })
-  .slice(0, 6);
+const portfolioItems = (await getPortfolioItems()).slice(0, 6);
 
 const clients = await getCollection("clients");
 const index = clients.find((client) => client.slug === "index") ?? {

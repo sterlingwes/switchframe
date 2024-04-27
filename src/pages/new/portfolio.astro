@@ -1,33 +1,9 @@
 ---
-import { getCollection } from "astro:content";
-import { categoryToFilterClass, normalizeCategory } from "../../lib/categories";
 import PortfolioGridLayout from "../../layouts/PortfolioGridLayout.astro";
+import { categoryToFilterClass } from "../../lib/categories";
+import { getPortfolioItems } from "../../lib/portfolio-list";
 
-const portfolio = await getCollection("portfolio");
-const portfolioItems = portfolio.map((item) => {
-  const categories = item.data.categories.map(normalizeCategory);
-  const filterCategories = item.data.categories.map(categoryToFilterClass);
-  return {
-    ...item.data,
-    categories,
-    filterCategories,
-    slug: item.slug,
-  };
-});
-
-const clientsCollection = await getCollection("clients");
-const portfolioOrder = (
-  clientsCollection.find((client) => client.slug === "index-portfolio")?.data
-    .order || ([] as Array<{ item: string }>)
-).map(({ item }) => item);
-portfolioItems.sort((a, b) => {
-  const aIndex = portfolioOrder.indexOf(a.title);
-  const bIndex = portfolioOrder.indexOf(b.title);
-  if (aIndex === -1 && bIndex === -1) return a.title.localeCompare(b.title);
-  if (aIndex === -1) return 1;
-  if (bIndex === -1) return -1;
-  return aIndex - bIndex;
-});
+const portfolioItems = await getPortfolioItems();
 
 const categoryDupeCheck = new Set<string>();
 const categoryFilters: Array<{ label: string; filterClass: string }> = [];
