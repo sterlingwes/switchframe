@@ -1,8 +1,9 @@
 import lev from "fastest-levenshtein";
 import { getCollection } from "astro:content";
+import { sortPortfolioItemsWith } from "./portfolio-list";
 
-const getPortfolioEntries = async () => {
-  const portfolioEntries = await getCollection("portfolio");
+const getPortfolioEntries = async (filter?: (entry: any) => boolean) => {
+  const portfolioEntries = await getCollection("portfolio", filter);
   return portfolioEntries;
 };
 
@@ -17,26 +18,22 @@ const cached = {
   portfolioEntries: null as PortfolioEntries | null,
   clientsCollection: null as ClientsCollection | null,
 };
-export const getCachedPortfolioEntries = async () => {
+
+const getCachedPortfolioEntries = async (filter?: (entry: any) => boolean) => {
   if (cached.portfolioEntries) return cached.portfolioEntries;
-  const portfolioEntries = await getPortfolioEntries();
+  const portfolioEntries = await getPortfolioEntries(filter);
   cached.portfolioEntries = portfolioEntries;
   return portfolioEntries;
 };
 
-export const getCachedClientsCollection = async () => {
+const getCachedClientsCollection = async () => {
   if (cached.clientsCollection) return cached.clientsCollection;
   const clientsCollection = await getClientsCollection();
   cached.clientsCollection = clientsCollection;
   return clientsCollection;
 };
 
-const clientNameThreshold = 4;
-export const getRelatedItems = async (
-  entry: PortfolioEntries[0],
-  index: number
-) => {
-  const portfolioEntries = await getCachedPortfolioEntries();
+export const getCachedPortfolioWithOrdering = async () => {
   const clientsCollection = await getCachedClientsCollection();
 
   const portfolioOrder = (
@@ -44,6 +41,22 @@ export const getRelatedItems = async (
       .order || ([] as Array<{ item: string }>)
   ).map(({ item }) => item);
 
+  const portfolioEntries = (
+    await getCachedPortfolioEntries((entry) =>
+      portfolioOrder.includes(entry.data.title)
+    )
+  ).sort(sortPortfolioItemsWith(portfolioOrder));
+
+  return { portfolioEntries, portfolioOrder };
+};
+
+const clientNameThreshold = 4;
+export const getRelatedItems = async (
+  entry: PortfolioEntries[0],
+  index: number
+) => {
+  const { portfolioEntries, portfolioOrder } =
+    await getCachedPortfolioWithOrdering();
   const last = portfolioEntries[index - 1];
   const next = portfolioEntries[index + 1];
 

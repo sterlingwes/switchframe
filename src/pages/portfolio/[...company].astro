@@ -2,13 +2,13 @@
 import PortfolioPageLayout from "../../layouts/PortfolioPageLayout.astro";
 import { normalizeCategory } from "../../lib/categories";
 import {
-  getCachedPortfolioEntries,
+  getCachedPortfolioWithOrdering,
   getRelatedItems,
 } from "../../lib/portfolio-page";
 import type { RenderedPortfolioProps } from "../../types/portfolio.types";
 
 export async function getStaticPaths() {
-  const portfolioEntries = await getCachedPortfolioEntries();
+  const { portfolioEntries } = await getCachedPortfolioWithOrdering();
 
   return portfolioEntries.reduce(async (chain, entry, i) => {
     const acc = await chain;

@@ -1,6 +1,22 @@
 import { getCollection } from "astro:content";
 import { categoryToFilterClass, normalizeCategory } from "./categories";
 
+export const sortPortfolioItemsWith =
+  (portfolioOrder: string[]) =>
+  (
+    a: { title?: string; data?: { title: string } },
+    b: { title?: string; data?: { title: string } }
+  ) => {
+    const aTitle = a.title ?? a.data?.title ?? "";
+    const bTitle = b.title ?? b.data?.title ?? "";
+    const aIndex = portfolioOrder.indexOf(aTitle);
+    const bIndex = portfolioOrder.indexOf(bTitle);
+    if (aIndex === -1 && bIndex === -1) return aTitle.localeCompare(bTitle);
+    if (aIndex === -1) return 1;
+    if (bIndex === -1) return -1;
+    return aIndex - bIndex;
+  };
+
 export const getPortfolioItems = async () => {
   const clientsCollection = await getCollection("clients");
   const portfolioOrder = (
@@ -22,14 +38,7 @@ export const getPortfolioItems = async () => {
     };
   });
 
-  portfolioItems.sort((a, b) => {
-    const aIndex = portfolioOrder.indexOf(a.title);
-    const bIndex = portfolioOrder.indexOf(b.title);
-    if (aIndex === -1 && bIndex === -1) return a.title.localeCompare(b.title);
-    if (aIndex === -1) return 1;
-    if (bIndex === -1) return -1;
-    return aIndex - bIndex;
-  });
+  portfolioItems.sort(sortPortfolioItemsWith(portfolioOrder));
 
   return portfolioItems;
 };
