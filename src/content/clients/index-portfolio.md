@@ -1,12 +1,12 @@
 ---
 order:
   - item: Well Groomed Man
-  - item: Curling is for Everyone
+  - item: Curling Canada - Curling is for Everyone
   - item: Coleman – ‘1000 Reasons to Pitch a Tent’
   - item: Curling Canada – ‘Most Canadian Thing Ever’
   - item: Best Way Stone - Commercials
-  - item: Intuit – ‘MatchMaker’
   - item: Curling Canada Foundation – ‘When I Grow Up’
+  - item: Intuit – ‘MatchMaker’
   - item: Sunkist – ‘Citrus Hacks’
   - item: Best Way Stone - Plant Tour
 ---
