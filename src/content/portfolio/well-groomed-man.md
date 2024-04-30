@@ -1,6 +1,6 @@
 ---
 title: Well Groomed Man
-thumbnail: /assets/well-groomed-man.jpg
+thumbnail: /assets/well-groomed-man-new.jpg
 client: Gillette and SE Health
 categories:
   - Creative
