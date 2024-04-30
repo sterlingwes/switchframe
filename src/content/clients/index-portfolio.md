@@ -6,4 +6,5 @@ order:
   - item: Curling Canada – ‘Most Canadian Thing Ever’
   - item: Best Way Stone
   - item: Intuit – ‘MatchMaker’
+  - item: Curling Canada Foundation – ‘When I Grow Up’
 ---
