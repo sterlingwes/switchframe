@@ -5,7 +5,7 @@ client: Curling Canada
 categories:
   - Creative
 videos:
-  - www.youtube.com/embed/OkCEKfmKr4U
+  - https://www.youtube.com/embed/OkCEKfmKr4U
 ---
 <p>
  Promotional video for Curling I/O, Curling
