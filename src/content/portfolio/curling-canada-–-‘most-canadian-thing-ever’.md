@@ -6,6 +6,6 @@ categories:
   - Commercial
   - Creative
 videos:
-  - https://www.youtube.com/embed/awWFJAW5d3I
+  - https://vimeo.com/941019995?share=copy
 ---
 What’s more ‘Canadian’ than Curling?? There are more than 1000 curling facilities in Canada. Be a good Canadian and find one near you today!
