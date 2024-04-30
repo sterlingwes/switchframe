@@ -1,5 +1,5 @@
 ---
-title: Curling is for Everyone
+title: Curling Canada - Curling is for Everyone
 thumbnail: /assets/curling-is-for-everyone.jpg
 client: Curling Canada
 categories:
