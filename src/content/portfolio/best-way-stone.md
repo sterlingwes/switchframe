@@ -1,5 +1,5 @@
 ---
-title: Best Way Stone
+title: Best Way Stone - Plant Tour
 thumbnail: /assets/bws-plant-tour.png
 client: Best Way Stone
 categories:
