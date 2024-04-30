@@ -10,4 +10,4 @@ videos:
   - https://player.vimeo.com/video/941060574
   - https://player.vimeo.com/video/941060604
 ---
-Write something about this project.
+.
