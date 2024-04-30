@@ -6,8 +6,8 @@ categories:
   - Commercial
   - Creative
 videos:
-  - www.youtube.com/embed/9FKvpCuOEk8
-  - www.youtube.com/embed/BiZEaRUMo4Y
+  - https://www.youtube.com/embed/9FKvpCuOEk8
+  - https://www.youtube.com/embed/BiZEaRUMo4Y
 ---
  See it on TSN during Season of Champions curling broadcasts or on our homepage at rocksandrings.com
 The program has reached over 1 Million kids. Does your school rock? For more information or to book                              Rocks & Rings at your child’s school, visit rocksandrings.com
