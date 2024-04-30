@@ -36,9 +36,6 @@ logos:
   - name: Unilever
     logo: https://switchframemedia.com/wp-content/uploads/2018/04/sf-clients-bw_0002_unilever.png
     website: http://www.unilever.ca/"
-  - name: Cohn & Wolfe
-    logo: https://switchframemedia.com/wp-content/uploads/2018/04/sf-clients_0016_cohn-wolfe.png
-    website: http://www.cohnwolfe.ca/"
   - name: AstraZeneca
     logo: https://switchframemedia.com/wp-content/uploads/2018/04/sf-clients_0019_AstraZeneca.png
     website: https://www.astrazeneca.ca/"
