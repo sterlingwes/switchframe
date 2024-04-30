@@ -1,5 +1,5 @@
 ---
-title: Sunkist – ‘Citrus Hacks’
+title: Sunkist
 thumbnail: https://switchframemedia.com/wp-content/uploads/2018/04/sf-work-sunkist1.png
 client: Sunkist
 categories:
