@@ -11,5 +11,3 @@ videos:
 ---
  See it on TSN during Season of Champions curling broadcasts or on our homepage at rocksandrings.com
 The program has reached over 1 Million kids. Does your school rock? For more information or to book                              Rocks & Rings at your child’s school, visit rocksandrings.com
-
-https://www.youtube.com/embed/U0jBCksSp8w
