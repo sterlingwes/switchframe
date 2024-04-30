@@ -5,6 +5,6 @@ client: Best Way Stone
 categories:
   - Creative
 videos:
-  - https://www.youtube.com/watch?v=lKAXRt_mCSs
+  - https://www.youtube.com/embed/lKAXRt_mCSs
 ---
 Write something in here
