@@ -7,4 +7,4 @@ categories:
 videos:
   - https://player.vimeo.com/video/941042800
 ---
-Need to write something about this project in this section.
+.
