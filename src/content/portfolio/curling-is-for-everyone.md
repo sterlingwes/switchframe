@@ -5,9 +5,6 @@ client: Curling Canada
 categories:
   - Creative
 videos:
-  - https://www.youtube.com/embed/aYEj1eXC9HQ?wmode=transparent
-  - ""
+  - https://player.vimeo.com/video/941050000
 ---
 Need to write something about this project in this section.
-
-941050000
