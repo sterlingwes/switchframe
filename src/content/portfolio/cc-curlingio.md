@@ -1,11 +1,11 @@
 ---
-title: "Curling Canada – ‘Curling I/O’"
+title: Curling Canada – ‘Curling I/O’
 thumbnail: /wp-content/uploads/2018/04/sf-work-ccio.png
 client: Curling Canada
 categories:
   - Creative
 videos:
-  - //www.youtube.com/embed/OkCEKfmKr4U?wmode=transparent
+  - www.youtube.com/embed/OkCEKfmKr4U
 ---
 <p>
  Promotional video for Curling I/O, Curling
@@ -19,4 +19,3 @@ videos:
                               what it is, what it does, how it benefits) and
                               on-boarding clubs.
 </p>
-
