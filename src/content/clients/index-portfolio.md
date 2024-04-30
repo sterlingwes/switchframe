@@ -12,4 +12,5 @@ order:
   - item: Best Way Stone - Plant Tour
   - item: Best Way Stone - Social Reels
   - item: SE Health - RBC Care Easy
+  - item: Curling Canada – ‘Curling I/O’
 ---
