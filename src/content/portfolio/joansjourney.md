@@ -1,12 +1,12 @@
 ---
-title: "Restylane Skinboosters – ‘Joan’s Journey’"
+title: Restylane Skinboosters – ‘Joan’s Journey’
 thumbnail: /wp-content/uploads/2018/04/sf-work-restylane.png
 client: Restylane Canada
 categories:
   - Case Study
   - Creative
 videos:
-  - //www.youtube.com/embed/udJ7CnTkGkc?wmode=transparent
+  - https://www.youtube.com/embed/KevxGJTanSQ
 ---
 <p>
  Hear why Joan Kelley Walker, entrepreneur,
