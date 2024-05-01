@@ -8,7 +8,7 @@ categories:
   - Social
 videos:
   - https://www.youtube.com/embed/WXHh_wadqPw
-  - https://www.youtube.com/embed/YC95ZyvJUjI
+  - https://www.youtube.com/embed/UXEorOy-z9k?si=2lmY1mpwMyljb1dg
   - https://www.youtube.com/embed/6axpWJ_j850
 ---
 <p>
