@@ -1,6 +1,6 @@
 ---
 title: Best Way Stone - Commercials
-thumbnail: /assets/bws-commercials.png
+thumbnail: /assets/bws-commercials.jpg
 client: Best Way Stone
 categories:
   - Commercial
