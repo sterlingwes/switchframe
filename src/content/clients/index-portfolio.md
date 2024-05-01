@@ -21,4 +21,5 @@ order:
   - item: Indie88 – ‘Music Inspires Us’
   - item: Progressive Waste Solutions- ‘Instructional Bins’
   - item: Restylane Skinboosters – ‘Joan’s Journey’
+  - item: Scotiabank – ‘Photography Award’
 ---
