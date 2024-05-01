@@ -19,4 +19,5 @@ order:
   - item: Curling Canada – ‘Learn To Curl’
   - item: Sunkist – ‘Citrus Hacks’
   - item: Indie88 – ‘Music Inspires Us’
+  - item: Progressive Waste Solutions- ‘Instructional Bins’
 ---
