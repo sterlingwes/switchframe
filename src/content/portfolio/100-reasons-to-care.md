@@ -6,7 +6,7 @@ categories:
   - Case Study
   - Social
 videos:
-  - https://www.youtube.com/embed/iXgzmqsCrag?wmode=transparent
+  - https://www.youtube.com/embed/R4Ig0AcHgAc
 ---
 <p>
  For the last twelve years, Ray has been the
@@ -23,4 +23,3 @@ videos:
                               healthy and independent living through integrated
                               programs and services.
 </p>
-
