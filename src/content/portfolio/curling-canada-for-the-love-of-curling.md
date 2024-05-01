@@ -1,5 +1,5 @@
 ---
-title: Curling Canada - For the Love of Curling
+title: Curling Canada Foundation - For the Love of Curling
 thumbnail: /assets/ccf.png
 client: Curling Canada
 categories:
