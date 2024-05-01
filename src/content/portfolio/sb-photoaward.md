@@ -1,13 +1,12 @@
 ---
-title: "Scotiabank – ‘Photography Award’"
+title: Scotiabank – ‘Photography Award’
 thumbnail: /wp-content/uploads/2018/04/sf-work-scotiabank-1.png
 client: ScotiaBank
 categories:
   - Case Study
   - French
 videos:
-  - //www.youtube.com/embed/OZGDuO4WSH8?wmode=transparent
-  - //www.youtube.com/embed/sxYbH69A0tg?wmode=transparent
+  - https://www.youtube.com/embed/HOmdSoikCcc
 ---
 <p>
  In partnership with the Canadian Photography
