@@ -1,5 +1,5 @@
 ---
-title: "Curling Canada – ‘Learn To Curl’"
+title: Curling Canada – ‘Learn To Curl’
 thumbnail: /wp-content/uploads/2018/04/sf-work-cclearn.png
 client: Curling Canada
 categories:
@@ -7,9 +7,9 @@ categories:
   - Motion Graphics
   - Social
 videos:
-  - //www.youtube.com/embed/WXHh_wadqPw?wmode=transparent
-  - //www.youtube.com/embed/YC95ZyvJUjI?wmode=transparent
-  - //www.youtube.com/embed/6axpWJ_j850?wmode=transparent
+  - https://www.youtube.com/embed/WXHh_wadqPw
+  - https://www.youtube.com/embed/YC95ZyvJUjI
+  - https://www.youtube.com/embed/6axpWJ_j850
 ---
 <p>
  We created series that presented the fundamentals
