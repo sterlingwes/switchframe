@@ -1,6 +1,6 @@
 ---
 title: Curling Canada Foundation - For the Love of Curling
-thumbnail: /assets/ccf.png
+thumbnail: /assets/ccf.jpg
 client: Curling Canada
 categories:
   - Commerical
