@@ -8,7 +8,6 @@ categories:
 videos:
   - https://www.youtube.com/embed/9o5ZlUiglFk
   - https://www.youtube.com/embed/Ww01KK07fAM
-  - https://www.youtube.com/embed/UIxMndX2RWc
   - https://www.youtube.com/embed/2N8ToJ0fEds
 ---
 <p>
