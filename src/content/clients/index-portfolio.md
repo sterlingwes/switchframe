@@ -6,6 +6,7 @@ order:
   - item: Curling Canada – ‘Most Canadian Thing Ever’
   - item: COLEMAN – ‘1000 REASONS TO PITCH A TENT’
   - item: Curling Canada Foundation - For the Love of Curling
+  - item: Stratford Festival - Grand Magic Trailer
   - item: Rocks & Rings – Broadcast Campaigns
   - item: Well Groomed Man
   - item: Curling Canada Foundation – ‘When I Grow Up’
