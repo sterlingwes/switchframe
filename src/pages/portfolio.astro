@@ -1,7 +1,7 @@
 ---
-import PortfolioGridLayout from "../../layouts/PortfolioGridLayout.astro";
-import { categoryToFilterClass } from "../../lib/categories";
-import { getPortfolioItems } from "../../lib/portfolio-list";
+import PortfolioGridLayout from "../layouts/PortfolioGridLayout.astro";
+import { categoryToFilterClass } from "../lib/categories";
+import { getPortfolioItems } from "../lib/portfolio-list";
 
 const portfolioItems = await getPortfolioItems();
 

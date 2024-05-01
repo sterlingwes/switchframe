@@ -879,10 +879,6 @@ const props = Astro.props as Props;
                               >{props.categories.join(", ")}</span
                             >
                           </div>
-                          <h6>About This Project</h6>
-                          <div class="info portfolio_content">
-                            <slot />
-                          </div>
                           <div class="portfolio_social_holder"></div>
                         </div>
                       </div>
@@ -913,7 +909,7 @@ const props = Astro.props as Props;
                       }
                     </div>
                     <div class="portfolio_button">
-                      <a itemprop="url" href="/new/portfolio/"></a>
+                      <a itemprop="url" href="/portfolio/"></a>
                     </div>
                     <div class="portfolio_next">
                       {
