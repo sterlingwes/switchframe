@@ -1,14 +1,15 @@
 ---
-title: "Curling Canada – ‘Johnny The Hammer Chow’"
+title: Curling Canada – ‘Johnny The Hammer Chow’
 thumbnail: /wp-content/uploads/2018/04/sf-work-CC-Johnny.png
 client: Curling Canada
 categories:
   - Commercial
   - Creative
 videos:
-  - //www.youtube.com/embed/xJbFK9gE9KQ?wmode=transparent
-  - //www.youtube.com/embed/rnLFjY4h_mw?wmode=transparent
-  - //www.youtube.com/embed/VjyL6hrfBQE?wmode=transparent
+  - https://www.youtube.com/embed/xbvipaWCGKc
+  - https://www.youtube.com/embed/zIjoIpC-SvI
+  - https://www.youtube.com/embed/13vN28Gwqrs
+  - https://www.youtube.com/embed/rnLFjY4h_mw
 ---
 <p>
  Johnny ‘The Hammer’ Chow was a
