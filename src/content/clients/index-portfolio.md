@@ -22,4 +22,5 @@ order:
   - item: Progressive Waste Solutions- ‘Instructional Bins’
   - item: Restylane Skinboosters – ‘Joan’s Journey’
   - item: Scotiabank – ‘Photography Award’
+  - item: Curling Canada – ‘Johnny The Hammer Chow’
 ---
