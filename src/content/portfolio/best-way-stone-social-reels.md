@@ -1,6 +1,6 @@
 ---
 title: Best Way Stone - Social Reels
-thumbnail: /assets/bws-tri-reels.jpg
+thumbnail: /assets/bws-tri-reels1.jpg
 client: Best Way Stone
 categories:
   - Social
