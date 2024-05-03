@@ -1,6 +1,6 @@
 ---
 title: Best Way Stone - Plant Tour
-thumbnail: /assets/bws-plant-tour.png
+thumbnail: /assets/bws-plant-tour.jpg
 client: Best Way Stone
 categories:
   - Creative
