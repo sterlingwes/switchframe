@@ -1,6 +1,6 @@
 ---
 title: Indie88 – ‘Music Inspires Us’
-thumbnail: /wp-content/uploads/2018/04/sf-work-881.png
+thumbnail: /assets/indie88.jpg
 client: INDIE88
 categories:
   - Commercial
