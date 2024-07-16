@@ -22,4 +22,5 @@ order:
   - item: Restylane Skinboosters – ‘Joan’s Journey’
   - item: PayPal - Small Business
   - item: Curling Canada – ‘Johnny The Hammer Chow’
+  - item: PayPal - Animated Explainers
 ---
