@@ -1,5 +1,5 @@
 ---
-title: Intuit - 'Matchmaker'
+title: Intuit - Matchmaker
 thumbnail: /assets/sf-work-intuitmatchmaker.png
 client: Intuit
 categories:
