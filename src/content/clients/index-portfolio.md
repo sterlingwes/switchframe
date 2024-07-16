@@ -21,4 +21,5 @@ order:
   - item: Indie88 – ‘Music Inspires Us’
   - item: Restylane Skinboosters – ‘Joan’s Journey’
   - item: Curling Canada – ‘Johnny The Hammer Chow’
+  - item: PayPal - Small Business
 ---
