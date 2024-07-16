@@ -10,7 +10,7 @@ order:
   - item: Rocks & Rings – Broadcast Campaigns
   - item: Well Groomed Man
   - item: Curling Canada Foundation – ‘When I Grow Up’
-  - item: Intuit – ‘MatchMaker’
+  - item: Intuit - Matchmaker
   - item: Best Way Stone - Plant Tour
   - item: Best Way Stone - Social Reels
   - item: SE Health - RBC Care Easy
