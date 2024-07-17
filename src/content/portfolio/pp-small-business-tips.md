@@ -1,5 +1,5 @@
 ---
-title: "PayPal – ‘Small Business Tips’"
+title: Z OLD - PayPal – ‘Small Business Tips’
 thumbnail: /wp-content/uploads/revslider/services/work-hero.jpg
 client: PayPal
 categories:
