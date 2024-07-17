@@ -1,5 +1,5 @@
 ---
-title: "Nintendo – ‘Mario & Luigi: Paper Jam’"
+title: "Z OLD - Nintendo – ‘Mario & Luigi: Paper Jam’"
 thumbnail: /wp-content/uploads/2018/04/sf-work-nintendo.png
 client: Nintendo
 categories:
