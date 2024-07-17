@@ -1,9 +1,7 @@
 ---
-title: "PKD Foundation of Canada"
+title: Z OLD - PKD Foundation of Canada
 thumbnail: /wp-content/uploads/2018/04/sf-work-pkd.png
-client: 
-                              Polycystic Kidney Disease Foundation of Canada
-                            
+client: Polycystic Kidney Disease Foundation of Canada
 categories:
   - Case Study
   - French
