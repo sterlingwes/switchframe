@@ -1,5 +1,5 @@
 ---
-title: "PayPal – ‘How To’"
+title: Z OLD - PayPal – ‘How To’
 thumbnail: /wp-content/uploads/2018/04/sf-work-Paypal-howto.png
 client: PayPal
 categories:
