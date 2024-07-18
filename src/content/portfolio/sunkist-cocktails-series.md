@@ -1,5 +1,5 @@
 ---
-title: "Sunkist – ‘Cocktails’"
+title: Z Old - Sunkist – ‘Cocktails’
 thumbnail: /wp-content/uploads/2018/04/sf-work-sunkist.png
 client: Sunkist
 categories:
