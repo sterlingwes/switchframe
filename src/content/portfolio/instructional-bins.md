@@ -1,5 +1,5 @@
 ---
-title: Progressive Waste Solutions- ‘Instructional Bins’
+title: Z OLD WORKING YT- Progressive Waste Solutions- ‘Instructional Bins’
 thumbnail: /wp-content/uploads/2018/04/sf-work-progressive2.png
 client: Progressive Waste Solutions
 categories:
