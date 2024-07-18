@@ -1,7 +1,7 @@
 ---
-title: "Real Estate – ‘Jermain Defoe Testimonial’"
+title: Z Old - Real Estate – ‘Jermain Defoe Testimonial’
 thumbnail: /wp-content/uploads/2018/04/sf-work-trump.png
-client: ""
+client: .
 categories:
   - Case Study
   - Creative
