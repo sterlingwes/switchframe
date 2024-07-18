@@ -1,5 +1,5 @@
 ---
-title: "Telus – Phone Unboxing – ‘Essential Phone’"
+title: Z OLD - Telus – Phone Unboxing – ‘Essential Phone’
 thumbnail: /wp-content/uploads/2018/04/sf-work-telus.png
 client: Telus
 categories:
