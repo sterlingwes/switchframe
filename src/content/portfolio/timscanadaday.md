@@ -1,5 +1,5 @@
 ---
-title: "Tim Hortons – ‘Canada Day 150th – Roll Up Cup’"
+title: Z Old - Tim Hortons – ‘Canada Day 150th – Roll Up Cup’
 thumbnail: /wp-content/uploads/2018/04/sf-work-timhorton.png
 client: Tim Hortons
 categories:
