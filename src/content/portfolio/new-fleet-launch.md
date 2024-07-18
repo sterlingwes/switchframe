@@ -1,5 +1,5 @@
 ---
-title: "Progressive Waste Solutions – ‘New Fleet Launch’"
+title: Z Old - Progressive Waste Solutions – ‘New Fleet Launch’
 thumbnail: /wp-content/uploads/2018/04/sf-work-progressive.png
 client: Progressive Waste Solutions
 categories:
