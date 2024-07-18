@@ -1,5 +1,5 @@
 ---
-title: "Zytiga – ‘Quality of Life’"
+title: Z OLD - Zytiga – ‘Quality of Life’
 thumbnail: /wp-content/uploads/2018/04/sf-work-drug.png
 client: Zytiga
 categories:
@@ -7,4 +7,4 @@ categories:
 videos:
   - //www.youtube.com/embed/1BHHi0S9rGI?wmode=transparent
 ---
-
+.
