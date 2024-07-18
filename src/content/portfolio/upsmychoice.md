@@ -1,5 +1,5 @@
 ---
-title: "UPS – ‘My Choice’"
+title: Z Old - UPS – ‘My Choice’
 thumbnail: /wp-content/uploads/2018/04/sf-work-ups.png
 client: UPS
 categories:
