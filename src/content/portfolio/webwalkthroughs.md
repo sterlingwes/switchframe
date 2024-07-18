@@ -1,5 +1,5 @@
 ---
-title: "Website Graphic Walk Throughs"
+title: Z OLD - Website Graphic Walk Throughs
 thumbnail: /wp-content/uploads/2018/04/sf-work-webwalkthrough.png
 client: Elizz
 categories:
