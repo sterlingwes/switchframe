@@ -1,5 +1,5 @@
 ---
-title: "PayPal – ‘Giving Tuesday’"
+title: Z OLD - PayPal – ‘Giving Tuesday’
 thumbnail: /wp-content/uploads/2018/04/sf-work-Paypal-event.png
 client: PayPal
 categories:
