@@ -1,5 +1,5 @@
 ---
-title: Scotiabank – ‘Photography Award’
+title: Z Old Working YT - Scotiabank – ‘Photography Award’
 thumbnail: /wp-content/uploads/2018/04/sf-work-scotiabank-1.png
 client: ScotiaBank
 categories:
