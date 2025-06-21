@@ -1,7 +1,7 @@
 ---
 order:
-  - item: Best Way Stone - Commercials
   - item: Curling Canada - Curling is for Everyone
+  - item: Best Way Stone - Commercials
   - item: Clubhouse – ‘Pure Flavour Story’
   - item: Curling Canada – ‘Most Canadian Thing Ever’
   - item: COLEMAN – ‘1000 REASONS TO PITCH A TENT’
